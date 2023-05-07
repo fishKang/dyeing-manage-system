@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dms-company-business-batch/dms-company-business-batch.iml" filepath="$PROJECT_DIR$/dms-company-business-batch/dms-company-business-batch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dms-company-business-job/dms-company-business-job.iml" filepath="$PROJECT_DIR$/dms-company-business-job/dms-company-business-job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dms-company-business-online/dms-company-business-online.iml" filepath="$PROJECT_DIR$/dms-company-business-online/dms-company-business-online.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dms-company-commons/dms-company-commons.iml" filepath="$PROJECT_DIR$/dms-company-commons/dms-company-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dms-company-inout/dms-company-inout.iml" filepath="$PROJECT_DIR$/dms-company-inout/dms-company-inout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/dyeing-manage-system.iml" filepath="$PROJECT_DIR$/.idea/dyeing-manage-system.iml" />
+    </modules>
+  </component>
+</project>

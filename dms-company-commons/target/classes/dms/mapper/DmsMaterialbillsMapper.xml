@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dms.mapper.DmsMaterialbillsMapper">
+  <resultMap id="BaseResultMap" type="dms.dto.DmsMaterialbills">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="customer" jdbcType="VARCHAR" property="customer" />
+    <result column="quantity" jdbcType="DECIMAL" property="quantity" />
+    <result column="colorname" jdbcType="VARCHAR" property="colorname" />
+    <result column="colorcode" jdbcType="VARCHAR" property="colorcode" />
+    <result column="clothescode" jdbcType="VARCHAR" property="clothescode" />
+    <result column="yarncode" jdbcType="VARCHAR" property="yarncode" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="createdate" jdbcType="VARCHAR" property="createdate" />
+    <result column="expirydate" jdbcType="VARCHAR" property="expirydate" />
+    <result column="plan" jdbcType="VARCHAR" property="plan" />
+    <result column="material" jdbcType="VARCHAR" property="material" />
+    <result column="count" jdbcType="INTEGER" property="count" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="operator" jdbcType="VARCHAR" property="operator" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, type, customer, quantity, colorname, colorcode, clothescode, yarncode, status, 
+    createdate, expirydate, plan, material, count, description, operator
+  </sql>
+  <select id="selectByExample" parameterType="dms.dto.DmsExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from dms_materialbills
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from dms_materialbills
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from dms_materialbills
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="dms.dto.DmsExample">
+    delete from dms_materialbills
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="dms.dto.DmsMaterialbills">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_materialbills (type, customer, quantity, 
+      colorname, colorcode, clothescode, 
+      yarncode, status, createdate, 
+      expirydate, plan, material, 
+      count, description, operator
+      )
+    values (#{type,jdbcType=INTEGER}, #{customer,jdbcType=VARCHAR}, #{quantity,jdbcType=DECIMAL}, 
+      #{colorname,jdbcType=VARCHAR}, #{colorcode,jdbcType=VARCHAR}, #{clothescode,jdbcType=VARCHAR}, 
+      #{yarncode,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{createdate,jdbcType=VARCHAR}, 
+      #{expirydate,jdbcType=VARCHAR}, #{plan,jdbcType=VARCHAR}, #{material,jdbcType=VARCHAR}, 
+      #{count,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}, #{operator,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="dms.dto.DmsMaterialbills">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_materialbills
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="type != null">
+        type,
+      </if>
+      <if test="customer != null">
+        customer,
+      </if>
+      <if test="quantity != null">
+        quantity,
+      </if>
+      <if test="colorname != null">
+        colorname,
+      </if>
+      <if test="colorcode != null">
+        colorcode,
+      </if>
+      <if test="clothescode != null">
+        clothescode,
+      </if>
+      <if test="yarncode != null">
+        yarncode,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createdate != null">
+        createdate,
+      </if>
+      <if test="expirydate != null">
+        expirydate,
+      </if>
+      <if test="plan != null">
+        plan,
+      </if>
+      <if test="material != null">
+        material,
+      </if>
+      <if test="count != null">
+        count,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="operator != null">
+        operator,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="customer != null">
+        #{customer,jdbcType=VARCHAR},
+      </if>
+      <if test="quantity != null">
+        #{quantity,jdbcType=DECIMAL},
+      </if>
+      <if test="colorname != null">
+        #{colorname,jdbcType=VARCHAR},
+      </if>
+      <if test="colorcode != null">
+        #{colorcode,jdbcType=VARCHAR},
+      </if>
+      <if test="clothescode != null">
+        #{clothescode,jdbcType=VARCHAR},
+      </if>
+      <if test="yarncode != null">
+        #{yarncode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createdate != null">
+        #{createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="expirydate != null">
+        #{expirydate,jdbcType=VARCHAR},
+      </if>
+      <if test="plan != null">
+        #{plan,jdbcType=VARCHAR},
+      </if>
+      <if test="material != null">
+        #{material,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null">
+        #{operator,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="dms.dto.DmsExample" resultType="java.lang.Integer">
+    select count(*) from dms_materialbills
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update dms_materialbills
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=INTEGER},
+      </if>
+      <if test="record.customer != null">
+        customer = #{record.customer,jdbcType=VARCHAR},
+      </if>
+      <if test="record.quantity != null">
+        quantity = #{record.quantity,jdbcType=DECIMAL},
+      </if>
+      <if test="record.colorname != null">
+        colorname = #{record.colorname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colorcode != null">
+        colorcode = #{record.colorcode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.clothescode != null">
+        clothescode = #{record.clothescode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.yarncode != null">
+        yarncode = #{record.yarncode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.createdate != null">
+        createdate = #{record.createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expirydate != null">
+        expirydate = #{record.expirydate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plan != null">
+        plan = #{record.plan,jdbcType=VARCHAR},
+      </if>
+      <if test="record.material != null">
+        material = #{record.material,jdbcType=VARCHAR},
+      </if>
+      <if test="record.count != null">
+        count = #{record.count,jdbcType=INTEGER},
+      </if>
+      <if test="record.description != null">
+        description = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.operator != null">
+        operator = #{record.operator,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update dms_materialbills
+    set id = #{record.id,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=INTEGER},
+      customer = #{record.customer,jdbcType=VARCHAR},
+      quantity = #{record.quantity,jdbcType=DECIMAL},
+      colorname = #{record.colorname,jdbcType=VARCHAR},
+      colorcode = #{record.colorcode,jdbcType=VARCHAR},
+      clothescode = #{record.clothescode,jdbcType=VARCHAR},
+      yarncode = #{record.yarncode,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER},
+      createdate = #{record.createdate,jdbcType=VARCHAR},
+      expirydate = #{record.expirydate,jdbcType=VARCHAR},
+      plan = #{record.plan,jdbcType=VARCHAR},
+      material = #{record.material,jdbcType=VARCHAR},
+      count = #{record.count,jdbcType=INTEGER},
+      description = #{record.description,jdbcType=VARCHAR},
+      operator = #{record.operator,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="dms.dto.DmsMaterialbills">
+    update dms_materialbills
+    <set>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="customer != null">
+        customer = #{customer,jdbcType=VARCHAR},
+      </if>
+      <if test="quantity != null">
+        quantity = #{quantity,jdbcType=DECIMAL},
+      </if>
+      <if test="colorname != null">
+        colorname = #{colorname,jdbcType=VARCHAR},
+      </if>
+      <if test="colorcode != null">
+        colorcode = #{colorcode,jdbcType=VARCHAR},
+      </if>
+      <if test="clothescode != null">
+        clothescode = #{clothescode,jdbcType=VARCHAR},
+      </if>
+      <if test="yarncode != null">
+        yarncode = #{yarncode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createdate != null">
+        createdate = #{createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="expirydate != null">
+        expirydate = #{expirydate,jdbcType=VARCHAR},
+      </if>
+      <if test="plan != null">
+        plan = #{plan,jdbcType=VARCHAR},
+      </if>
+      <if test="material != null">
+        material = #{material,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null">
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="dms.dto.DmsMaterialbills">
+    update dms_materialbills
+    set type = #{type,jdbcType=INTEGER},
+      customer = #{customer,jdbcType=VARCHAR},
+      quantity = #{quantity,jdbcType=DECIMAL},
+      colorname = #{colorname,jdbcType=VARCHAR},
+      colorcode = #{colorcode,jdbcType=VARCHAR},
+      clothescode = #{clothescode,jdbcType=VARCHAR},
+      yarncode = #{yarncode,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      createdate = #{createdate,jdbcType=VARCHAR},
+      expirydate = #{expirydate,jdbcType=VARCHAR},
+      plan = #{plan,jdbcType=VARCHAR},
+      material = #{material,jdbcType=VARCHAR},
+      count = #{count,jdbcType=INTEGER},
+      description = #{description,jdbcType=VARCHAR},
+      operator = #{operator,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

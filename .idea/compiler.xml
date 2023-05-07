@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dms-company-business-job" />
+        <module name="dms-company-commons" />
+        <module name="dms-company-inout" />
+        <module name="dms-company-business-online" />
+        <module name="dms-company-business-batch" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dms-company-business-batch" target="1.8" />
+      <module name="dms-company-business-job" target="1.8" />
+      <module name="dms-company-business-online" target="1.8" />
+      <module name="dms-company-commons" target="1.8" />
+      <module name="dms-company-inout" target="1.8" />
+      <module name="dyeing-manage-system" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dms-company-business-batch" options="-parameters" />
+      <module name="dms-company-business-job" options="-parameters" />
+      <module name="dms-company-business-online" options="-parameters" />
+      <module name="dms-company-commons" options="-parameters" />
+      <module name="dms-company-inout" options="-parameters" />
+    </option>
+  </component>
+</project>

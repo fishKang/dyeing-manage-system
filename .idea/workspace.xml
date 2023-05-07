@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="db8e1a33-ad40-42dd-98b2-f2bd83e6a73c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ADD_SUFFIX_TO_CHERRY_PICKS_OF_PUBLISHED_COMMITS" value="false" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\soft\repository" />
+        <option name="mavenHome" value="E:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+        <option name="userSettingsFile" value="E:\soft\apache-maven-3.8.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+    <option name="vmOptions" value="-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true" />
+  </component>
+  <component name="ProjectId" id="2N0Wry77f33E2ejc3gIGoL1DRTK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.5827586" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="dms.mapper" />
+      <recent name="dms.domain.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\java\dms\common" />
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\java\dms\util" />
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="common" />
+      <recent name="spring.util" />
+      <recent name="sql.util" />
+      <recent name="dms.util" />
+      <recent name="dms.common" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\resources\properties" />
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-commons\src\main\resources\dms\mapper" />
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-commons\src\main\java\dms\mapper" />
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-commons\src\main\resources\dms.mapper" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Generator">
+    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dms.util.Generator" />
+      <module name="dms-company-business-online" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dms.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WangKangTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WangKangTest" />
+      <module name="dms-company-business-online" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="dms-company-business-online" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="dms.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="Application.Generator" />
+        <item itemvalue="Application.WangKangTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db8e1a33-ad40-42dd-98b2-f2bd83e6a73c" name="Default Changelist" comment="" />
+      <created>1678801685009</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678801685009</updated>
+      <workItem from="1678801686071" duration="2487000" />
+      <workItem from="1678886045275" duration="4332000" />
+      <workItem from="1679118998209" duration="4044000" />
+      <workItem from="1679215021426" duration="3985000" />
+      <workItem from="1679319091638" duration="1257000" />
+      <workItem from="1679490469491" duration="596000" />
+      <workItem from="1680182925058" duration="1196000" />
+      <workItem from="1680272900224" duration="1247000" />
+      <workItem from="1680327523798" duration="14878000" />
+      <workItem from="1680398705612" duration="28208000" />
+      <workItem from="1680519436913" duration="8890000" />
+      <workItem from="1680677617880" duration="4909000" />
+      <workItem from="1680682631404" duration="13063000" />
+      <workItem from="1681023111848" duration="15964000" />
+      <workItem from="1681131388004" duration="3657000" />
+      <workItem from="1681309218886" duration="5038000" />
+      <workItem from="1681740185837" duration="5769000" />
+      <workItem from="1682343961861" duration="3523000" />
+      <workItem from="1682733753569" duration="10446000" />
+      <workItem from="1682854521940" duration="9628000" />
+      <workItem from="1682906830295" duration="2919000" />
+      <workItem from="1682959452186" duration="5761000" />
+      <workItem from="1683033282789" duration="6260000" />
+      <workItem from="1683379305920" duration="4197000" />
+      <workItem from="1683438852339" duration="6276000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1678888704029">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="121" y="0" key="#Project_Structure/0.0.1280.672@0.0.1280.672" timestamp="1678888704029" />
+    <state x="446" y="41" key="#com.intellij.ide.util.MemberChooser" timestamp="1682909432792">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="446" y="41" key="#com.intellij.ide.util.MemberChooser/0.0.1280.672@0.0.1280.672" timestamp="1682909432792" />
+    <state x="84" y="260" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1681746161591">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="84" y="260" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.672@0.0.1280.672" timestamp="1681746161591" />
+    <state x="336" y="204" width="730" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1681032534648">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="336" y="204" width="730" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.672@0.0.1280.672" timestamp="1681032534648" />
+    <state x="310" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1682738783695">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="310" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.672@0.0.1280.672" timestamp="1682738783695" />
+    <state x="371" y="83" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1680362877827">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="371" y="83" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.672@0.0.1280.672" timestamp="1680362877827" />
+    <state x="396" y="39" key="#xdebugger.evaluate" timestamp="1683461062313">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="396" y="39" key="#xdebugger.evaluate/0.0.1280.672@0.0.1280.672" timestamp="1683461062313" />
+    <state width="483" height="466" key="DebuggerActiveHint" timestamp="1683461318475">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="483" height="466" key="DebuggerActiveHint/0.0.1280.672@0.0.1280.672" timestamp="1683461318475" />
+    <state x="421" y="92" key="FileChooserDialogImpl" timestamp="1683463382877">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="421" y="92" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1683463382877" />
+    <state width="1014" height="229" key="GridCell.Tab.0.bottom" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state width="1014" height="229" key="GridCell.Tab.0.center" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state width="1014" height="229" key="GridCell.Tab.0.left" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state width="1014" height="229" key="GridCell.Tab.0.right" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state width="1014" height="229" key="GridCell.Tab.1.bottom" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.1.bottom/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state width="1014" height="229" key="GridCell.Tab.1.center" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.1.center/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state width="1014" height="229" key="GridCell.Tab.1.left" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.1.left/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state width="1014" height="229" key="GridCell.Tab.1.right" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.1.right/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state width="1014" height="229" key="GridCell.Tab.2.bottom" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.2.bottom/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state width="1014" height="229" key="GridCell.Tab.2.center" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.2.center/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state width="1014" height="229" key="GridCell.Tab.2.left" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.2.left/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state width="1014" height="229" key="GridCell.Tab.2.right" timestamp="1683462810688">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1014" height="229" key="GridCell.Tab.2.right/0.0.1280.672@0.0.1280.672" timestamp="1683462810688" />
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1682737022694">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.672@0.0.1280.672" timestamp="1682737022694" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1683463303541">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.672@0.0.1280.672" timestamp="1683463303541" />
+    <state width="514" height="446" key="SwitcherDM" timestamp="1680705763131">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="514" height="446" key="SwitcherDM/0.0.1280.672@0.0.1280.672" timestamp="1680705763131" />
+    <state x="156" y="66" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1683035911144">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="156" y="66" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.672@0.0.1280.672" timestamp="1683035911144" />
+    <state x="339" y="68" width="859" height="594" key="find.popup" timestamp="1683461561921">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="339" y="68" width="859" height="594" key="find.popup/0.0.1280.672@0.0.1280.672" timestamp="1683461561921" />
+    <state x="27" y="0" key="new project wizard" timestamp="1680687004485">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="27" y="0" key="new project wizard/0.0.1280.672@0.0.1280.672" timestamp="1680687004485" />
+    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup" timestamp="1682961795430">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup/0.0.1280.672@0.0.1280.672" timestamp="1682961795430" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/controller/service/AbstractTradeService.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/infrastructure/repository/DmsUserRepository.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dms-company-commons/src/main/java/sql/util/AbstractMybatisExecutor.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dms-company-commons/src/main/java/spring/util/SpringUtil.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../soft/repository/org/springframework/spring-aop/5.1.5.RELEASE/spring-aop-5.1.5.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class</url>
+          <line>503</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="SpringUtil.getBean(&quot;sqlSessionFactory&quot;)" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

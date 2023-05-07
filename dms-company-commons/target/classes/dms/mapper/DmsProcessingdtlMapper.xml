@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dms.mapper.DmsProcessingdtlMapper">
+  <resultMap id="BaseResultMap" type="dms.dto.DmsProcessingdtl">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="customer" jdbcType="VARCHAR" property="customer" />
+    <result column="plan" jdbcType="VARCHAR" property="plan" />
+    <result column="colorcode" jdbcType="VARCHAR" property="colorcode" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="material" jdbcType="VARCHAR" property="material" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="plannedvolume" jdbcType="DECIMAL" property="plannedvolume" />
+    <result column="netweight" jdbcType="DECIMAL" property="netweight" />
+    <result column="outbounddate" jdbcType="VARCHAR" property="outbounddate" />
+    <result column="createtime" jdbcType="VARCHAR" property="createtime" />
+    <result column="createdate" jdbcType="VARCHAR" property="createdate" />
+    <result column="expirydate" jdbcType="VARCHAR" property="expirydate" />
+    <result column="expirytime" jdbcType="VARCHAR" property="expirytime" />
+    <result column="operator" jdbcType="VARCHAR" property="operator" />
+    <result column="settlementvolume" jdbcType="DECIMAL" property="settlementvolume" />
+    <result column="pricetype" jdbcType="INTEGER" property="pricetype" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, customer, plan, colorcode, type, material, status, plannedvolume, netweight, 
+    outbounddate, createtime, createdate, expirydate, expirytime, operator, settlementvolume, 
+    pricetype, price, amount, remark
+  </sql>
+  <select id="selectByExample" parameterType="dms.dto.DmsExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from dms_processingdtl
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from dms_processingdtl
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from dms_processingdtl
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="dms.dto.DmsExample">
+    delete from dms_processingdtl
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="dms.dto.DmsProcessingdtl">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_processingdtl (customer, plan, colorcode, 
+      type, material, status, 
+      plannedvolume, netweight, outbounddate, 
+      createtime, createdate, expirydate, 
+      expirytime, operator, settlementvolume, 
+      pricetype, price, amount, 
+      remark)
+    values (#{customer,jdbcType=VARCHAR}, #{plan,jdbcType=VARCHAR}, #{colorcode,jdbcType=VARCHAR}, 
+      #{type,jdbcType=VARCHAR}, #{material,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
+      #{plannedvolume,jdbcType=DECIMAL}, #{netweight,jdbcType=DECIMAL}, #{outbounddate,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=VARCHAR}, #{createdate,jdbcType=VARCHAR}, #{expirydate,jdbcType=VARCHAR}, 
+      #{expirytime,jdbcType=VARCHAR}, #{operator,jdbcType=VARCHAR}, #{settlementvolume,jdbcType=DECIMAL}, 
+      #{pricetype,jdbcType=INTEGER}, #{price,jdbcType=DECIMAL}, #{amount,jdbcType=DECIMAL}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="dms.dto.DmsProcessingdtl">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_processingdtl
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="customer != null">
+        customer,
+      </if>
+      <if test="plan != null">
+        plan,
+      </if>
+      <if test="colorcode != null">
+        colorcode,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="material != null">
+        material,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="plannedvolume != null">
+        plannedvolume,
+      </if>
+      <if test="netweight != null">
+        netweight,
+      </if>
+      <if test="outbounddate != null">
+        outbounddate,
+      </if>
+      <if test="createtime != null">
+        createtime,
+      </if>
+      <if test="createdate != null">
+        createdate,
+      </if>
+      <if test="expirydate != null">
+        expirydate,
+      </if>
+      <if test="expirytime != null">
+        expirytime,
+      </if>
+      <if test="operator != null">
+        operator,
+      </if>
+      <if test="settlementvolume != null">
+        settlementvolume,
+      </if>
+      <if test="pricetype != null">
+        pricetype,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="customer != null">
+        #{customer,jdbcType=VARCHAR},
+      </if>
+      <if test="plan != null">
+        #{plan,jdbcType=VARCHAR},
+      </if>
+      <if test="colorcode != null">
+        #{colorcode,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="material != null">
+        #{material,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="plannedvolume != null">
+        #{plannedvolume,jdbcType=DECIMAL},
+      </if>
+      <if test="netweight != null">
+        #{netweight,jdbcType=DECIMAL},
+      </if>
+      <if test="outbounddate != null">
+        #{outbounddate,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null">
+        #{createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="expirydate != null">
+        #{expirydate,jdbcType=VARCHAR},
+      </if>
+      <if test="expirytime != null">
+        #{expirytime,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null">
+        #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="settlementvolume != null">
+        #{settlementvolume,jdbcType=DECIMAL},
+      </if>
+      <if test="pricetype != null">
+        #{pricetype,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="dms.dto.DmsExample" resultType="java.lang.Integer">
+    select count(*) from dms_processingdtl
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update dms_processingdtl
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.customer != null">
+        customer = #{record.customer,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plan != null">
+        plan = #{record.plan,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colorcode != null">
+        colorcode = #{record.colorcode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.material != null">
+        material = #{record.material,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.plannedvolume != null">
+        plannedvolume = #{record.plannedvolume,jdbcType=DECIMAL},
+      </if>
+      <if test="record.netweight != null">
+        netweight = #{record.netweight,jdbcType=DECIMAL},
+      </if>
+      <if test="record.outbounddate != null">
+        outbounddate = #{record.outbounddate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createtime != null">
+        createtime = #{record.createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createdate != null">
+        createdate = #{record.createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expirydate != null">
+        expirydate = #{record.expirydate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expirytime != null">
+        expirytime = #{record.expirytime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.operator != null">
+        operator = #{record.operator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.settlementvolume != null">
+        settlementvolume = #{record.settlementvolume,jdbcType=DECIMAL},
+      </if>
+      <if test="record.pricetype != null">
+        pricetype = #{record.pricetype,jdbcType=INTEGER},
+      </if>
+      <if test="record.price != null">
+        price = #{record.price,jdbcType=DECIMAL},
+      </if>
+      <if test="record.amount != null">
+        amount = #{record.amount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.remark != null">
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update dms_processingdtl
+    set id = #{record.id,jdbcType=INTEGER},
+      customer = #{record.customer,jdbcType=VARCHAR},
+      plan = #{record.plan,jdbcType=VARCHAR},
+      colorcode = #{record.colorcode,jdbcType=VARCHAR},
+      type = #{record.type,jdbcType=VARCHAR},
+      material = #{record.material,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER},
+      plannedvolume = #{record.plannedvolume,jdbcType=DECIMAL},
+      netweight = #{record.netweight,jdbcType=DECIMAL},
+      outbounddate = #{record.outbounddate,jdbcType=VARCHAR},
+      createtime = #{record.createtime,jdbcType=VARCHAR},
+      createdate = #{record.createdate,jdbcType=VARCHAR},
+      expirydate = #{record.expirydate,jdbcType=VARCHAR},
+      expirytime = #{record.expirytime,jdbcType=VARCHAR},
+      operator = #{record.operator,jdbcType=VARCHAR},
+      settlementvolume = #{record.settlementvolume,jdbcType=DECIMAL},
+      pricetype = #{record.pricetype,jdbcType=INTEGER},
+      price = #{record.price,jdbcType=DECIMAL},
+      amount = #{record.amount,jdbcType=DECIMAL},
+      remark = #{record.remark,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="dms.dto.DmsProcessingdtl">
+    update dms_processingdtl
+    <set>
+      <if test="customer != null">
+        customer = #{customer,jdbcType=VARCHAR},
+      </if>
+      <if test="plan != null">
+        plan = #{plan,jdbcType=VARCHAR},
+      </if>
+      <if test="colorcode != null">
+        colorcode = #{colorcode,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="material != null">
+        material = #{material,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="plannedvolume != null">
+        plannedvolume = #{plannedvolume,jdbcType=DECIMAL},
+      </if>
+      <if test="netweight != null">
+        netweight = #{netweight,jdbcType=DECIMAL},
+      </if>
+      <if test="outbounddate != null">
+        outbounddate = #{outbounddate,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createtime = #{createtime,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null">
+        createdate = #{createdate,jdbcType=VARCHAR},
+      </if>
+      <if test="expirydate != null">
+        expirydate = #{expirydate,jdbcType=VARCHAR},
+      </if>
+      <if test="expirytime != null">
+        expirytime = #{expirytime,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null">
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="settlementvolume != null">
+        settlementvolume = #{settlementvolume,jdbcType=DECIMAL},
+      </if>
+      <if test="pricetype != null">
+        pricetype = #{pricetype,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="dms.dto.DmsProcessingdtl">
+    update dms_processingdtl
+    set customer = #{customer,jdbcType=VARCHAR},
+      plan = #{plan,jdbcType=VARCHAR},
+      colorcode = #{colorcode,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      material = #{material,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      plannedvolume = #{plannedvolume,jdbcType=DECIMAL},
+      netweight = #{netweight,jdbcType=DECIMAL},
+      outbounddate = #{outbounddate,jdbcType=VARCHAR},
+      createtime = #{createtime,jdbcType=VARCHAR},
+      createdate = #{createdate,jdbcType=VARCHAR},
+      expirydate = #{expirydate,jdbcType=VARCHAR},
+      expirytime = #{expirytime,jdbcType=VARCHAR},
+      operator = #{operator,jdbcType=VARCHAR},
+      settlementvolume = #{settlementvolume,jdbcType=DECIMAL},
+      pricetype = #{pricetype,jdbcType=INTEGER},
+      price = #{price,jdbcType=DECIMAL},
+      amount = #{amount,jdbcType=DECIMAL},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
