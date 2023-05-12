@@ -22,43 +22,5 @@ import java.util.Properties;
  */
 @Configuration
 @MapperScan({"dms.mapper"})
-@Component
 public class MyBatisConfig {
-
-    @Bean(name = "sqlSessionFactory")
-    public SqlSessionFactory sqlSessionFactory() throws Exception {
-        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
-        sqlSessionFactoryBean.setDataSource(dataSource());
-//        sqlSessionFactoryBean.setTypeAliasesPackage("com.viewscenes.order.entity");
-        sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver()
-                .getResources("classpath*:/dms/mapper/*.xml"));
-        sqlSessionFactoryBean.setTransactionFactory(new JdbcTransactionFactory());
-        sqlSessionFactoryBean.setConfigLocation(new DefaultResourceLoader().getResource("classpath:/mybatis-config.xml"));
-        return sqlSessionFactoryBean.getObject();
-    }
-    @Bean
-    public DataSourceTransactionManager transactionManager() {
-        return new DataSourceTransactionManager(dataSource());
-    }
-    @Bean
-    public  DataSource dataSource() {
-        PooledDataSource pooledDataSource = new PooledDataSource();
-        pooledDataSource.setDriver("com.mysql.cj.jdbc.Driver");
-        pooledDataSource.setUrl("jdbc:mysql://localhost:3306/dyeing_database?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai");
-        pooledDataSource.setUsername("root");
-        pooledDataSource.setPassword("123456");
-        return pooledDataSource;
-    }
-    @Bean
-    public JdbcTransactionFactory jdbcTransactionFactory(){
-        JdbcTransactionFactory jdbcTransactionFactory = new JdbcTransactionFactory();
-        jdbcTransactionFactory.setProperties(new Properties());
-        return jdbcTransactionFactory;
-    }
-
-    @Bean(name = "sqlSession")
-    public SqlSessionTemplate sqlSession() throws Exception {
-        SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory());
-        return sqlSessionTemplate;
-    }
 }

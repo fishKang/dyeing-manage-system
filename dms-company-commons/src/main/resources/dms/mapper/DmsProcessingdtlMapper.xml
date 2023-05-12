@@ -100,6 +100,20 @@
       order by ${orderByClause}
     </if>
   </select>
+
+  <select id="selectProcessingdtlList" parameterType="map" resultType="map">
+    select
+    <include refid="Base_Column_List" />
+    from dms_processingdtl
+    <where>
+      <if test="type != null and type != ''"> and type = #{type,jdbcType=VARCHAR}</if>
+      <if test="customer != null and customer != ''"> and customer = #{customer,jdbcType=VARCHAR}</if>
+      <if test="createdate != null and createdate != ''"> and createdate = #{createdate,jdbcType=VARCHAR}</if>
+      <if test="begindate != null and begindate != ''"> and outbounddate <![CDATA[>=]]> #{begindate,jdbcType=VARCHAR}</if>
+      <if test="enddate != null and enddate != ''"> and outbounddate <![CDATA[<=]]> #{enddate,jdbcType=VARCHAR}</if>
+    </where>
+    order by id asc
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -437,6 +451,25 @@
       createdate = #{createdate,jdbcType=VARCHAR},
       expirydate = #{expirydate,jdbcType=VARCHAR},
       expirytime = #{expirytime,jdbcType=VARCHAR},
+      operator = #{operator,jdbcType=VARCHAR},
+      settlementvolume = #{settlementvolume,jdbcType=DECIMAL},
+      pricetype = #{pricetype,jdbcType=INTEGER},
+      price = #{price,jdbcType=DECIMAL},
+      amount = #{amount,jdbcType=DECIMAL},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <update id="updateDmsProcessingdtl" parameterType="dms.dto.DmsProcessingdtl">
+    update dms_processingdtl
+    set customer = #{customer,jdbcType=VARCHAR},
+      plan = #{plan,jdbcType=VARCHAR},
+      colorcode = #{colorcode,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      material = #{material,jdbcType=VARCHAR},
+      plannedvolume = #{plannedvolume,jdbcType=DECIMAL},
+      netweight = #{netweight,jdbcType=DECIMAL},
+      outbounddate = #{outbounddate,jdbcType=VARCHAR},
       operator = #{operator,jdbcType=VARCHAR},
       settlementvolume = #{settlementvolume,jdbcType=DECIMAL},
       pricetype = #{pricetype,jdbcType=INTEGER},

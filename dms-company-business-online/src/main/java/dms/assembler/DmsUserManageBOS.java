@@ -1,7 +1,6 @@
 package dms.assembler;
 
 import cn.hutool.core.bean.BeanUtil;
-import cn.hutool.json.JSONUtil;
 import dms.common.CodeEnum;
 import dms.domain.valueobject.DmsUserVO;
 import dms.dto.DmsUser;
@@ -10,8 +9,6 @@ import dms.infrastructure.repository.DmsUserRepository;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Map;
 
 @Service
 public class DmsUserManageBOS {
@@ -31,5 +28,14 @@ public class DmsUserManageBOS {
             log.info("DmsUserManageBOS-用户已注册"+ dmsUserVO.toString());
             throw new BusinessFailException(CodeEnum.ERR_0003.getCode(),CodeEnum.ERR_0003.getMsg());
         }
+    }
+
+    public void userLogin(DmsUserVO dmsUserVO, Logger log) throws BusinessFailException {
+        DmsUser dmsUser = dmsUserRepository.selectForUserRegister(dmsUserVO,log);
+        if(null == dmsUser){
+            log.info("DmsUserManageBOS-用户登录失败"+ dmsUserVO.toString());
+            throw new BusinessFailException(CodeEnum.ERR_0005.getCode(),CodeEnum.ERR_0005.getMsg());
+        }
+        BeanUtil.copyProperties(dmsUser,dmsUserVO.getDmsUserBO());
     }
 }

@@ -1,7 +1,7 @@
 package dms.domain.valueobject;
 
 import dms.domain.model.common.DmsCommonBO;
-import dms.domain.model.user.DmsUserBO;
+import dms.domain.model.DmsUserBO;
 import lombok.Data;
 
 @Data

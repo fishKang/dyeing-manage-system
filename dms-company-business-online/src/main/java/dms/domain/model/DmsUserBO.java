@@ -1,4 +1,4 @@
-package dms.domain.model.user;
+package dms.domain.model;
 
 import lombok.Data;
 

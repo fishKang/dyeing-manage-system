@@ -36,4 +36,45 @@ public class DyeingManageSystemController {
         return resultMap;
     }
 
+    @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> userLogin(@RequestBody Map<String,Object> map){
+        Map<String,Object> resultMap= iDmsServiceARS.userLogin(map);
+        return resultMap;
+    }
+
+    @RequestMapping(value = "/queryCustomer", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> queryCustomer(@RequestBody Map<String,Object> map){
+        Map<String,Object> resultMap= iDmsServiceARS.queryCustomer(map);
+        return resultMap;
+    }
+
+    @RequestMapping(value = "/addProcessingDetails", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> addProcessingDetails(@RequestBody Map<String,Object> map){
+        Map<String,Object> resultMap= iDmsServiceARS.addProcessingDetails(map);
+        return resultMap;
+    }
+
+    @RequestMapping(value = "/queryProcessingDetails", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> queryProcessingDetails(@RequestBody Map<String,Object> map){
+        Map<String,Object> resultMap= iDmsServiceARS.queryProcessingDetails(map);
+        return resultMap;
+    }
+
+    @RequestMapping(value = "/updateProcessingDetails", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> updateProcessingDetails(@RequestBody Map<String,Object> map){
+        Map<String,Object> resultMap= iDmsServiceARS.updateProcessingDetails(map);
+        return resultMap;
+    }
+
+    @RequestMapping(value = "/queryColor", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> queryColor(@RequestBody Map<String,Object> map){
+        Map<String,Object> resultMap= iDmsServiceARS.queryColor(map);
+        return resultMap;
+    }
 }

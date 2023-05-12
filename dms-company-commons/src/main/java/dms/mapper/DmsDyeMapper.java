@@ -3,8 +3,13 @@ package dms.mapper;
 import dms.dto.DmsDye;
 import dms.dto.DmsExample;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@Mapper
 public interface DmsDyeMapper {
     int countByExample(DmsExample example);
 

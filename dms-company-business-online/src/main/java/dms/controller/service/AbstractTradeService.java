@@ -4,6 +4,8 @@ import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.exceptions.StatefulException;
 import cn.hutool.core.exceptions.ValidateException;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONUtil;
 import dms.assembler.DmsChannelLogBOS;
 import dms.common.CodeEnum;
 import dms.common.CommonConstants;
@@ -95,6 +97,7 @@ public abstract class AbstractTradeService implements IService{
     }
 
     private void updateChanLog(DmsChannelLogVO dmsChannelLogVO,TradeResponse tradeResponse,Logger log){
+        dmsChannelLogVO.getDmsChannelLogBO().setOutput(JSONUtil.toJsonStr(tradeResponse.getData()));
         dmsChannelLogBOS.updateOperatelog(dmsChannelLogVO,log);
     }
 

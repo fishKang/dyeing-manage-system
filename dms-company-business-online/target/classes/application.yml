@@ -10,8 +10,9 @@ logging:
   config:
     classpath:log4j2.xml
 mybatis:
-  config-location:
-    - classpath:mybatis-config.xml
   mapper-locations:
     - classpath:mapper/*.xml
     - classpath*:dms/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl

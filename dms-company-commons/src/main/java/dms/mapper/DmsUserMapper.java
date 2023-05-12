@@ -5,10 +5,12 @@ import dms.dto.DmsExample;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
+@Mapper
 public interface DmsUserMapper {
     int countByExample(DmsExample example);
 

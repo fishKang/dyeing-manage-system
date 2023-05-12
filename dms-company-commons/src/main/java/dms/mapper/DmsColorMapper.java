@@ -3,10 +3,14 @@ package dms.mapper;
 import dms.dto.DmsColor;
 import dms.dto.DmsExample;
 import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
+@Mapper
 public interface DmsColorMapper {
     int countByExample(DmsExample example);
 
@@ -19,6 +23,8 @@ public interface DmsColorMapper {
     int insertSelective(DmsColor record);
 
     List<DmsColor> selectByExample(DmsExample example);
+
+    List<Map> selectDmsColorList(Map<String,Object> map);
 
     DmsColor selectByPrimaryKey(Integer id);
 

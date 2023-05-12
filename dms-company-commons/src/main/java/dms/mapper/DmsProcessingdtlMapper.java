@@ -3,8 +3,14 @@ package dms.mapper;
 import dms.dto.DmsProcessingdtl;
 import dms.dto.DmsExample;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
+import java.util.Map;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@Mapper
 public interface DmsProcessingdtlMapper {
     int countByExample(DmsExample example);
 
@@ -13,10 +19,11 @@ public interface DmsProcessingdtlMapper {
     int deleteByPrimaryKey(Integer id);
 
     int insert(DmsProcessingdtl record);
-
     int insertSelective(DmsProcessingdtl record);
 
     List<DmsProcessingdtl> selectByExample(DmsExample example);
+
+    List<Map> selectProcessingdtlList(Map<String,Object> map);
 
     DmsProcessingdtl selectByPrimaryKey(Integer id);
 
@@ -27,4 +34,6 @@ public interface DmsProcessingdtlMapper {
     int updateByPrimaryKeySelective(DmsProcessingdtl record);
 
     int updateByPrimaryKey(DmsProcessingdtl record);
+
+    int updateDmsProcessingdtl(DmsProcessingdtl record);
 }

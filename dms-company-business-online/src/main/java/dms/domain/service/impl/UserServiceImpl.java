@@ -1,6 +1,6 @@
 package dms.domain.service.impl;
 
-import dms.domain.model.user.DmsUserBO;
+import dms.domain.model.DmsUserBO;
 import dms.domain.service.IUserService;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;

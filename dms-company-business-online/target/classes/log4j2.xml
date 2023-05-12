@@ -102,5 +102,9 @@
         <Logger name="userManageLogger" additivity="${LOGGER_ADDITIVITY}">
             <AppenderRef ref="async.userManage.appender" level="info" />
         </Logger>
+
+        <logger name="dms.mapper.DmsProcessingdtlMapper" level="info" additivity="false">
+            <appender-ref ref="async.userManage.appender" level="info" />
+        </logger>
     </loggers>
 </configuration>

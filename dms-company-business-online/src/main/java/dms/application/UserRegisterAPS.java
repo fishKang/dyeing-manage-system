@@ -7,19 +7,17 @@ import dms.assembler.DmsUserManageBOS;
 import dms.common.CodeEnum;
 import dms.convertor.ConvertorToMap;
 import dms.domain.model.common.DmsCommonBO;
-import dms.domain.model.user.DmsUserBO;
+import dms.domain.model.DmsUserBO;
 import dms.domain.valueobject.DmsUserVO;
 import dms.infrastructure.exception.BusinessFailException;
 import dms.util.MapUtil;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Map;
 
 @Service
-@Transactional
 public class UserRegisterAPS extends AbstractTradeAPS{
     @Autowired
     DmsUserManageBOS dmsUserManageBOS;
@@ -29,13 +27,14 @@ public class UserRegisterAPS extends AbstractTradeAPS{
         try{
             DmsUserVO dmsUserVO = initInputParam(map,logger);
             dmsUserManageBOS.userRegister(dmsUserVO,logger);
+            logger.info("UserRegisterAPS-用户注册结束，出参为："+ JSONUtil.toJsonStr(map));
+            return ConvertorToMap.convertorSuccessMap();
         }catch (BusinessFailException e){
             return ConvertorToMap.convertorFailMap(e.getCode(),e.getMsg(), e.getInfo());
         }catch (Exception e){
             return ConvertorToMap.convertorFailMap(CodeEnum.ERR_9999.getCode(),CodeEnum.ERR_9999.getMsg(),e.toString());
         }
-        logger.info("UserRegisterAPS-用户注册结束，出参为："+ JSONUtil.toJsonStr(map));
-        return ConvertorToMap.convertorSuccessMap();
+
     }
 
     public DmsUserVO initInputParam(Map<String, Object> map, Logger logger){

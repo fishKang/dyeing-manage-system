@@ -44,6 +44,48 @@ public class IDmsServiceARSImpl extends AbstractTradeService implements IDmsServ
         return execute(inputMap);
     }
 
+    @Override
+    public Map<String, Object> userLogin(Map<String, Object> inputMap) {
+        inputMap.put(APSSERVICE,"userLoginAPS");
+        inputMap.put(METHOD,MAINPROCESS);
+        return execute(inputMap);
+    }
+
+    @Override
+    public Map<String, Object> queryCustomer(Map<String, Object> inputMap) {
+        inputMap.put(APSSERVICE,"queryCustomerAPS");
+        inputMap.put(METHOD,MAINPROCESS);
+        return execute(inputMap);
+    }
+
+    @Override
+    public Map<String, Object> addProcessingDetails(Map<String, Object> inputMap) {
+        inputMap.put(APSSERVICE,"addProcessingDetailsAPS");
+        inputMap.put(METHOD,MAINPROCESS);
+        return execute(inputMap);
+    }
+
+    @Override
+    public Map<String, Object> queryProcessingDetails(Map<String, Object> inputMap) {
+        inputMap.put(APSSERVICE,"queryProcessingDetailsAPS");
+        inputMap.put(METHOD,MAINPROCESS);
+        return execute(inputMap);
+    }
+
+    @Override
+    public Map<String, Object> updateProcessingDetails(Map<String, Object> inputMap) {
+        inputMap.put(APSSERVICE,"updateProcessingDetailsAPS");
+        inputMap.put(METHOD,MAINPROCESS);
+        return execute(inputMap);
+    }
+
+    @Override
+    public Map<String, Object> queryColor(Map<String, Object> inputMap) {
+        inputMap.put(APSSERVICE,"queryColorAPS");
+        inputMap.put(METHOD,MAINPROCESS);
+        return execute(inputMap);
+    }
+
     public Map<String, Object> execute(Map<String, Object> inputMap){
         Map<String, Object> result = super.invoke(inputMap);
         return result;

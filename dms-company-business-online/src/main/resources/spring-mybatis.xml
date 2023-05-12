@@ -12,7 +12,6 @@
         <property name="mapperLocations">
             <array>
                 <value>classpath*:dms/mapper/*.xml</value>
-
             </array>
         </property>
         <property name="transactionFactory" ref="transactionManager" />

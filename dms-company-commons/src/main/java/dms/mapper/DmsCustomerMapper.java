@@ -3,8 +3,14 @@ package dms.mapper;
 import dms.dto.DmsCustomer;
 import dms.dto.DmsExample;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
+import java.util.Map;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@Mapper
 public interface DmsCustomerMapper {
     int countByExample(DmsExample example);
 
@@ -17,6 +23,8 @@ public interface DmsCustomerMapper {
     int insertSelective(DmsCustomer record);
 
     List<DmsCustomer> selectByExample(DmsExample example);
+
+    List<Map> selectCustomerList(DmsExample example);
 
     DmsCustomer selectByPrimaryKey(Integer id);
 

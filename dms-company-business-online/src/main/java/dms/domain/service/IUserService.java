@@ -1,6 +1,6 @@
 package dms.domain.service;
 
-import dms.domain.model.user.DmsUserBO;
+import dms.domain.model.DmsUserBO;
 import org.apache.logging.log4j.Logger;
 
 public interface IUserService {

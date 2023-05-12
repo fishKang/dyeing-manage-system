@@ -1,9 +1,8 @@
-import cn.hutool.Hutool;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.json.JSONUtil;
 import dms.domain.model.common.DmsCommonBO;
-import dms.domain.model.user.DmsUserBO;
+import dms.domain.model.DmsUserBO;
 
 import java.util.HashMap;
 import java.util.Map;
