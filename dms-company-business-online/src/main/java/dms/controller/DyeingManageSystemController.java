@@ -77,4 +77,11 @@ public class DyeingManageSystemController {
         Map<String,Object> resultMap= iDmsServiceARS.queryColor(map);
         return resultMap;
     }
+
+    @RequestMapping(value = "/queryCraft", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> queryCraft(@RequestBody Map<String,Object> map){
+        Map<String,Object> resultMap= iDmsServiceARS.queryCraft(map);
+        return resultMap;
+    }
 }

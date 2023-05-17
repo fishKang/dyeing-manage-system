@@ -20,97 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db8e1a33-ad40-42dd-98b2-f2bd83e6a73c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_1_10.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-batch/target/dms-company-business-batch-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-batch/target/dms-company-business-batch-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-job/target/dms-company-business-job-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-job/target/dms-company-business-job-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/dms-company-business-online.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/dms-company-business-online.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/application/UserRegisterAPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/application/UserRegisterAPS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/assembler/DmsUserManageBOS.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/assembler/DmsUserManageBOS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/common/CodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/common/CodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/config/MyBatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/config/MyBatisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/config/SqlSessionFactory.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/controller/DyeingManageSystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/controller/DyeingManageSystemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/controller/service/AbstractTradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/controller/service/AbstractTradeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/controller/service/IDmsServiceARS.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/controller/service/IDmsServiceARS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/controller/service/impl/IDmsServiceARSImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/controller/service/impl/IDmsServiceARSImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/convertor/ConvertorToMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/convertor/ConvertorToMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/domain/model/user/DmsUserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/domain/model/DmsUserBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/domain/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/domain/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/domain/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/domain/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/domain/valueobject/DmsUserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/domain/valueobject/DmsUserVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/resources/META-INF/spring.factories" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/resources/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/resources/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/resources/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/resources/properties/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/resources/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/resources/spring-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/test/java/WangKangTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/test/java/WangKangTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/META-INF/spring.factories" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/application/AbstractTradeAPS.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/application/AbstractTradeAPS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/application/UserRegisterAPS.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/application/UserRegisterAPS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/assembler/DmsUserManageBOS.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/assembler/DmsUserManageBOS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/common/CodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/common/CodeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/config/MyBatisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/config/MyBatisConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/config/SqlSessionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/infrastructure/repository/DmsColorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/infrastructure/repository/DmsColorRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/controller/DyeingManageSystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/controller/DyeingManageSystemController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/controller/service/AbstractTradeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/controller/service/AbstractTradeService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/controller/service/IDmsServiceARS.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/controller/service/IDmsServiceARS.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/controller/service/impl/IDmsServiceARSImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/controller/service/impl/IDmsServiceARSImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/convertor/ConvertorToMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/convertor/ConvertorToMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/domain/model/user/DmsUserBO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/domain/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/domain/service/IUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/domain/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/domain/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/domain/valueobject/DmsUserVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/domain/valueobject/DmsUserVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/infrastructure/repository/DmsUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/infrastructure/repository/DmsUserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/properties/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/spring-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/dms-company-business-online-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/dms-company-business-online-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/dms-company-business-online-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/dms-company-business-online-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/test-classes/WangKangTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/test-classes/WangKangTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/dms-company-commons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/dms-company-commons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsColorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsColorMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/infrastructure/repository/DmsColorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-business-online/target/classes/dms/infrastructure/repository/DmsColorRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsCraftMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsCraftMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsCustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsCustomerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsDyeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsDyeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsMaterialbillsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsMaterialbillsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsMaterialbillsdtlMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsMaterialbillsdtlMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsOperatelogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsOperatelogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsProcessingdtlMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsProcessingdtlMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/java/dms/mapper/DmsUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/resources/dms/mapper/DmsColorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/resources/dms/mapper/DmsColorMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/resources/dms/mapper/DmsCustomerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/resources/dms/mapper/DmsCustomerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/resources/dms/mapper/DmsProcessingdtlMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/resources/dms/mapper/DmsProcessingdtlMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsColorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsColorMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsColorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsColorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dms-company-commons/src/main/resources/dms/mapper/DmsCraftMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/src/main/resources/dms/mapper/DmsCraftMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsCraftMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsCraftMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsCustomerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsCustomerMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsCustomerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsCustomerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsDyeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsDyeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsMaterialbillsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsMaterialbillsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsMaterialbillsdtlMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsMaterialbillsdtlMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsOperatelogMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsOperatelogMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsProcessingdtlMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsProcessingdtlMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsProcessingdtlMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsProcessingdtlMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/dms-company-commons-1.0-SNAPSHOT-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/dms-company-commons-1.0-SNAPSHOT-sources.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/dms-company-commons-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/dms-company-commons-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dms-company-inout/target/dms-company-inout-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-inout/target/dms-company-inout-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsCraftMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dms-company-commons/target/classes/dms/mapper/DmsCraftMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,22 +82,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../dye-system/pom.xml" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.5827586" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\resources\properties" />
-      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-commons\src\main\resources\dms\mapper" />
-      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-commons\src\main\java\dms\mapper" />
-      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-commons\src\main\resources\dms.mapper" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="dms.mapper" />
       <recent name="dms.domain.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\java\dms\common" />
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\java\dms\util" />
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dms.domain.model" />
@@ -182,10 +105,11 @@
       <recent name="dms.assembler" />
       <recent name="dms.application" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\java\dms\common" />
-      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\java\dms\util" />
-      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-business-online\src\main\resources\properties" />
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-commons\src\main\resources\dms\mapper" />
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-commons\src\main\java\dms\mapper" />
+      <recent name="E:\workspace_springboot\dyeingManageSystem\dyeing-manage-system\dms-company-commons\src\main\resources\dms.mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -291,8 +215,25 @@
       <workItem from="1683815600558" duration="9006000" />
       <workItem from="1683824761422" duration="836000" />
       <workItem from="1683864698426" duration="3989000" />
-      <workItem from="1683900792927" duration="7995000" />
+      <workItem from="1683900792927" duration="8446000" />
+      <workItem from="1683944218837" duration="13820000" />
+      <workItem from="1684028608152" duration="3661000" />
     </task>
+    <task id="LOCAL-00001" summary="1新增加工明细&#10;2查询加工明细&#10;3更新加工明细&#10;4查询色号">
+      <created>1683909369400</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683909369400</updated>
+    </task>
+    <task id="LOCAL-00002" summary="补充结构">
+      <created>1683944383333</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683944383333</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +262,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1新增加工明细&#10;2查询加工明细&#10;3更新加工明细&#10;4查询色号" />
+    <MESSAGE value="补充结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="补充结构" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1678888704029">
@@ -355,69 +301,69 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state width="483" height="466" key="DebuggerActiveHint/0.0.1280.672@0.0.1280.672" timestamp="1683461318475" />
-    <state x="421" y="92" key="FileChooserDialogImpl" timestamp="1683463382877">
+    <state x="421" y="92" key="FileChooserDialogImpl" timestamp="1683999015865">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="421" y="92" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1683463382877" />
-    <state width="1014" height="217" key="GridCell.Tab.0.bottom" timestamp="1683908937667">
+    <state x="421" y="92" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1683999015865" />
+    <state width="1014" height="217" key="GridCell.Tab.0.bottom" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
-    <state width="1014" height="217" key="GridCell.Tab.0.center" timestamp="1683908937667">
+    <state width="1014" height="217" key="GridCell.Tab.0.center" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
-    <state width="1014" height="217" key="GridCell.Tab.0.left" timestamp="1683908937667">
+    <state width="1014" height="217" key="GridCell.Tab.0.left" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
-    <state width="1014" height="217" key="GridCell.Tab.0.right" timestamp="1683908937667">
+    <state width="1014" height="217" key="GridCell.Tab.0.right" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
-    <state width="1014" height="217" key="GridCell.Tab.1.bottom" timestamp="1683908937667">
+    <state width="1014" height="217" key="GridCell.Tab.1.bottom" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.1.bottom/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.1.bottom/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
-    <state width="1014" height="217" key="GridCell.Tab.1.center" timestamp="1683908937667">
+    <state width="1014" height="217" key="GridCell.Tab.1.center" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.1.center/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.1.center/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
-    <state width="1014" height="217" key="GridCell.Tab.1.left" timestamp="1683908937667">
+    <state width="1014" height="217" key="GridCell.Tab.1.left" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.1.left/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.1.left/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
-    <state width="1014" height="217" key="GridCell.Tab.1.right" timestamp="1683908937667">
+    <state width="1014" height="217" key="GridCell.Tab.1.right" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.1.right/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.1.right/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
-    <state width="1014" height="217" key="GridCell.Tab.2.bottom" timestamp="1683908937667">
+    <state width="1014" height="217" key="GridCell.Tab.2.bottom" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.2.bottom/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.2.bottom/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.2.bottom/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
-    <state width="1014" height="217" key="GridCell.Tab.2.center" timestamp="1683908937667">
+    <state width="1014" height="217" key="GridCell.Tab.2.center" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.2.center/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.2.center/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.2.center/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
-    <state width="1014" height="217" key="GridCell.Tab.2.left" timestamp="1683908937667">
+    <state width="1014" height="217" key="GridCell.Tab.2.left" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.2.left/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.2.left/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.2.left/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
-    <state width="1014" height="217" key="GridCell.Tab.2.right" timestamp="1683908937667">
+    <state width="1014" height="217" key="GridCell.Tab.2.right" timestamp="1684035177678">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1014" height="217" key="GridCell.Tab.2.right/0.0.1280.672@0.0.1280.672" timestamp="1683908937667" />
+    <state width="1014" height="217" key="GridCell.Tab.2.right/0.0.1280.672@0.0.1280.672" timestamp="1684035177678" />
     <state width="1229" height="282" key="GridCell.Tab.2.right/0.0.1536.816@0.0.1536.816" timestamp="1683868725501" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1682737022694">
       <screen x="0" y="0" width="1280" height="672" />
@@ -447,10 +393,10 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="27" y="0" key="new project wizard/0.0.1280.672@0.0.1280.672" timestamp="1680687004485" />
-    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup" timestamp="1683908675159">
+    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup" timestamp="1684029757730">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup/0.0.1280.672@0.0.1280.672" timestamp="1683908675159" />
+    <state x="303" y="0" width="672" height="678" key="search.everywhere.popup/0.0.1280.672@0.0.1280.672" timestamp="1684029757730" />
     <state x="364" y="0" width="807" height="824" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1683867613225" />
   </component>
   <component name="XDebuggerManager">
@@ -470,6 +416,11 @@
           <url>file://$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/infrastructure/repository/DmsCustomerRepository.java</url>
           <line>23</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/dms-company-business-online/src/main/java/dms/controller/DyeingManageSystemController.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

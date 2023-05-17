@@ -17,4 +17,6 @@ public interface IDmsServiceARS {
     public Map<String,Object> updateProcessingDetails(Map<String,Object> inputMap);
     //查询色号名称
     public Map<String,Object> queryColor(Map<String,Object> inputMap);
+    //查询工艺类型名称
+    public Map<String,Object> queryCraft(Map<String,Object> inputMap);
 }

@@ -86,6 +86,13 @@ public class IDmsServiceARSImpl extends AbstractTradeService implements IDmsServ
         return execute(inputMap);
     }
 
+    @Override
+    public Map<String, Object> queryCraft(Map<String, Object> inputMap) {
+        inputMap.put(APSSERVICE,"queryCraftAPS");
+        inputMap.put(METHOD,MAINPROCESS);
+        return execute(inputMap);
+    }
+
     public Map<String, Object> execute(Map<String, Object> inputMap){
         Map<String, Object> result = super.invoke(inputMap);
         return result;

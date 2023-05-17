@@ -86,6 +86,18 @@
       order by ${orderByClause}
     </if>
   </select>
+
+  <select id="selectDmsCraftList" parameterType="map" resultType="map">
+    select
+    id,name
+    from dms_craft
+    <where>
+      <if test="name != null and name != ''">
+        name like #{name,jdbcType=VARCHAR}
+      </if>
+    </where>
+    order by id asc
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

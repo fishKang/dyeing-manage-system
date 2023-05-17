@@ -3,6 +3,7 @@ package dms.mapper;
 import dms.dto.DmsCraft;
 import dms.dto.DmsExample;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -22,6 +23,8 @@ public interface DmsCraftMapper {
     int insertSelective(DmsCraft record);
 
     List<DmsCraft> selectByExample(DmsExample example);
+
+    List<Map> selectDmsCraftList(Map<String,Object> map);
 
     DmsCraft selectByPrimaryKey(Integer id);
 
