@@ -13,13 +13,12 @@ import dms.domain.model.common.DmsChannelLogBO;
 import dms.domain.model.common.DmsCommonBO;
 import dms.domain.model.trade.TradeResponse;
 import dms.domain.valueobject.DmsChannelLogVO;
+import dms.util.MapUtil;
 import dms.util.SpringUtil;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public abstract class AbstractTradeService implements IService{
     @Autowired
@@ -115,7 +114,24 @@ public abstract class AbstractTradeService implements IService{
         outputMap.put(CommonConstants.RETCODE,tradeResponse.getReturncode());
         outputMap.put(CommonConstants.RETMSG,tradeResponse.getReturnmsg());
         outputMap.put(CommonConstants.RETINFO,tradeResponse.getReturninfo());
-        outputMap.put("private",tradeResponse.getData());
+        if(CodeEnum.ERR_0000.getCode().equals(tradeResponse.getReturncode())){
+            outputMap.put("success",true);
+        }else{
+            outputMap.put("success",false);
+        }
+        outputMap.put("data", tradeResponse.getData());
+        if(tradeResponse.getData() instanceof Map){
+            Map<String,Object> retinfoMap = (Map<String, Object>) tradeResponse.getData();
+            outputMap.put("data", retinfoMap.get("RETINFO"));
+            if(retinfoMap.get("RETINFO") instanceof List){
+                ArrayList list = (ArrayList) retinfoMap.get("RETINFO");
+                outputMap.put("total",list.size());
+            }
+        }
+
+        outputMap.put("errorCode",tradeResponse.getReturncode());
+        outputMap.put("errorMessage",tradeResponse.getReturnmsg());
+
         return outputMap;
     }
 

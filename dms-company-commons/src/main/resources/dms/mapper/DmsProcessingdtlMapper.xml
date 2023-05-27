@@ -107,7 +107,7 @@
     from dms_processingdtl
     <where>
       <if test="type != null and type != ''"> and type = #{type,jdbcType=VARCHAR}</if>
-      <if test="customer != null and customer != ''"> and customer = #{customer,jdbcType=VARCHAR}</if>
+      <if test="customer != null and customer != ''"> and customer like #{customer,jdbcType=VARCHAR}</if>
       <if test="createdate != null and createdate != ''"> and createdate = #{createdate,jdbcType=VARCHAR}</if>
       <if test="begindate != null and begindate != ''"> and outbounddate <![CDATA[>=]]> #{begindate,jdbcType=VARCHAR}</if>
       <if test="enddate != null and enddate != ''"> and outbounddate <![CDATA[<=]]> #{enddate,jdbcType=VARCHAR}</if>

@@ -30,6 +30,11 @@ public class DmsProcessingdtlRepository {
     }
 
     public void selectProcessingdtlList(DmsProcessingdtlVO dmsProcessingdtlVO , Logger log) {
+        String customer = dmsProcessingdtlVO.getDmsProcessingdtlBO().getCustomer();
+        if(null != customer ){
+            dmsProcessingdtlVO.getDmsProcessingdtlBO().setCustomer("%"+customer+"%");
+        }
+
         Map<String,Object> input = BeanUtil.beanToMap(dmsProcessingdtlVO.getDmsProcessingdtlBO());
         List list =  dmsProcessingdtlMapper.selectProcessingdtlList(input);
         dmsProcessingdtlVO.setDmsProcessingdtlBOList(list);

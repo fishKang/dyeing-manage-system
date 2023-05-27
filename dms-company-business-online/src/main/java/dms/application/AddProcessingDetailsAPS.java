@@ -15,6 +15,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.Map;
 
 @Service
@@ -44,7 +45,9 @@ public class AddProcessingDetailsAPS extends AbstractTradeAPS{
 
         Map<String, Object> privateMap = MapUtil.nvl4Map(map,"private");
         DmsProcessingdtlBO dmsProcessingdtlBO = BeanUtil.mapToBean(privateMap, DmsProcessingdtlBO.class,true);
-
+        if(null == dmsProcessingdtlBO.getAmount() || dmsProcessingdtlBO.getAmount().compareTo(new BigDecimal(0)) == 0){
+            dmsProcessingdtlBO.setAmount(dmsProcessingdtlBO.getSettlementvolume().multiply(dmsProcessingdtlBO.getPrice()));
+        }
         DmsProcessingdtlVO dmsProcessingdtlVO = new DmsProcessingdtlVO();
         dmsProcessingdtlVO.setDmsCommonBO(dmsCommonBO);
         dmsProcessingdtlVO.setDmsProcessingdtlBO(dmsProcessingdtlBO);

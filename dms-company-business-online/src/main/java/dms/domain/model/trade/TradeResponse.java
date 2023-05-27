@@ -1,8 +1,8 @@
 package dms.domain.model.trade;
 
-import cn.hutool.core.map.MapUtil;
 import dms.common.CodeEnum;
 import dms.common.CommonConstants;
+import dms.util.MapUtil;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -15,6 +15,13 @@ public class TradeResponse<T> implements Serializable {
     String returninfo;
     T data;
 
+    public static TradeResponse createResponse(Map<String,Object> data){
+        TradeResponse tradeResponse = new TradeResponse();
+        tradeResponse.setReturncode(MapUtil.nvl(data,"RETCODE"));
+        tradeResponse.setReturnmsg(MapUtil.nvl(data,"RETMSG"));
+        tradeResponse.setData(data);
+        return tradeResponse;
+    }
     public static TradeResponse createSuccessResponse(Map<String,Object> data){
         TradeResponse tradeResponse = new TradeResponse();
         tradeResponse.setReturncode(CodeEnum.ERR_0000.getCode());

@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Api(tags = "DyeingManageSystem", description = "染色管理系统")
@@ -82,6 +85,79 @@ public class DyeingManageSystemController {
     @ResponseBody
     public Map<String,Object> queryCraft(@RequestBody Map<String,Object> map){
         Map<String,Object> resultMap= iDmsServiceARS.queryCraft(map);
+        return resultMap;
+    }
+
+    @RequestMapping(value = "/queryCraft2", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> queryCraft2(@RequestBody Map<String,Object> map){
+        List<Map> list = new ArrayList<Map>();
+        for(int i = 0 ;i < 10 ;i++){
+            Map<String,Object> detailMap= new HashMap<>();
+            detailMap.put("createtime",i);
+            detailMap.put("amount",i);
+            detailMap.put("settlementvolume",i);
+            detailMap.put("colorcode",i);
+            detailMap.put("createdate",i);
+            detailMap.put("remark ",i);
+            detailMap.put("type",i);
+            detailMap.put("plannedvolume",i);
+            detailMap.put("material",i);
+            detailMap.put("price",i);
+            detailMap.put("netweight",i);
+            detailMap.put("outbounddate",i);
+            detailMap.put("pricetype",i);
+            detailMap.put("id",i);
+            detailMap.put("plan",i);
+            detailMap.put("customer",i);
+            detailMap.put("status",i);
+            list.add(detailMap);
+        }
+        Map<String,Object> resultMap= new HashMap<>();
+        resultMap.put("data",list);
+        resultMap.put("total",10);
+        resultMap.put("success",true);
+        resultMap.put("errorCode",0);
+        resultMap.put("errorMessage",0);
+        return resultMap;
+    }
+
+    @RequestMapping(value = "/queryCraft3", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> queryCraft3(@RequestBody Map<String,Object> map){
+        List<Map> list = new ArrayList<Map>();
+        for(int i = 0 ;i < 10 ;i++){
+            Map<String,Object> detailMap= new HashMap<>();
+            detailMap.put("createtime",i);
+            detailMap.put("amount",i);
+            detailMap.put("settlementvolume",i);
+            detailMap.put("colorcode",i);
+            detailMap.put("createdate",i);
+            detailMap.put("remark ",i);
+            detailMap.put("type",i);
+            detailMap.put("plannedvolume",i);
+            detailMap.put("material",i);
+            detailMap.put("price",i);
+            detailMap.put("netweight",i);
+            detailMap.put("outbounddate",i);
+            detailMap.put("pricetype",i);
+            detailMap.put("id",i);
+            detailMap.put("plan",i);
+            detailMap.put("customer",i);
+            detailMap.put("status",i);
+            list.add(detailMap);
+        }
+
+
+        Map<String,Object> retinfoMap= new HashMap<>();
+        retinfoMap.put("RETINFO",list);
+
+        Map<String,Object> resultMap= new HashMap<>();
+        resultMap.put("data",retinfoMap);
+        resultMap.put("total",10);
+        resultMap.put("success",true);
+        resultMap.put("errorCode",0);
+        resultMap.put("errorMessage",0);
         return resultMap;
     }
 }

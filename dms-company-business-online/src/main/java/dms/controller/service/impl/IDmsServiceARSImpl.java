@@ -29,7 +29,7 @@ public class IDmsServiceARSImpl extends AbstractTradeService implements IDmsServ
         dmsChannelLogBO.setRegChanLog(true);
         dmsChannelLogBO.setIndate(dmsCommonBO.getWorkdate());
         dmsChannelLogBO.setIntime(dmsCommonBO.getWorktime());
-        dmsChannelLogBO.setLogger(LogManager.getLogger(LoggerConstants.USER));
+        dmsChannelLogBO.setLogger(LogManager.getLogger(LoggerConstants.BUSINESS));
         dmsChannelLogBO.setInput(JSONUtil.toJsonStr(inputMap));
 
         dmsChannelLogVO.setDmsChannelLogBO(dmsChannelLogBO);

@@ -29,7 +29,7 @@ public abstract class AbstractTradeAPS implements ITrade{
             logger.info("交易异常："+ e.toString());
             return TradeResponse.createFailResponse(CodeEnum.ERR_9999.getCode(),CodeEnum.ERR_9999.getMsg(),e.toString());
         }
-        return TradeResponse.createSuccessResponse(resultMap);
+        return TradeResponse.createResponse(resultMap);
     }
 
     public abstract Map<String,Object> mainProcess(Map<String,Object> map,Logger logger);
