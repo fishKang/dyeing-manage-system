@@ -3,7 +3,6 @@ package dms.controller;
 import dms.application.UserRegisterAPS;
 import dms.controller.service.IDmsServiceARS;
 import dms.domain.model.trade.TradeResponse;
-import io.swagger.annotations.Api;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Api(tags = "DyeingManageSystem", description = "染色管理系统")
+//@Api(tags = "DyeingManageSystem", description = "染色管理系统")
 @Controller
 @RequestMapping("/deingManageSystem")
 public class DyeingManageSystemController {

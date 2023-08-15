@@ -39,20 +39,6 @@ public class DmsOperatelog implements Serializable {
     private Integer status;
 
     /**
-     * 请求参数
-     *
-     * @mbggenerated
-     */
-    private String input;
-
-    /**
-     * 返回参数
-     *
-     * @mbggenerated
-     */
-    private String output;
-
-    /**
      * 请求日期
      *
      * @mbggenerated
@@ -86,6 +72,20 @@ public class DmsOperatelog implements Serializable {
      * @mbggenerated
      */
     private String operator;
+
+    /**
+     * 请求参数
+     *
+     * @mbggenerated
+     */
+    private String input;
+
+    /**
+     * 返回参数
+     *
+     * @mbggenerated
+     */
+    private String output;
 
     private static final long serialVersionUID = 1L;
 
@@ -129,22 +129,6 @@ public class DmsOperatelog implements Serializable {
         this.status = status;
     }
 
-    public String getInput() {
-        return input;
-    }
-
-    public void setInput(String input) {
-        this.input = input;
-    }
-
-    public String getOutput() {
-        return output;
-    }
-
-    public void setOutput(String output) {
-        this.output = output;
-    }
-
     public String getIndate() {
         return indate;
     }
@@ -185,6 +169,22 @@ public class DmsOperatelog implements Serializable {
         this.operator = operator;
     }
 
+    public String getInput() {
+        return input;
+    }
+
+    public void setInput(String input) {
+        this.input = input;
+    }
+
+    public String getOutput() {
+        return output;
+    }
+
+    public void setOutput(String output) {
+        this.output = output;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -196,13 +196,13 @@ public class DmsOperatelog implements Serializable {
         sb.append(", service=").append(service);
         sb.append(", method=").append(method);
         sb.append(", status=").append(status);
-        sb.append(", input=").append(input);
-        sb.append(", output=").append(output);
         sb.append(", indate=").append(indate);
         sb.append(", intime=").append(intime);
         sb.append(", outdate=").append(outdate);
         sb.append(", outtime=").append(outtime);
         sb.append(", operator=").append(operator);
+        sb.append(", input=").append(input);
+        sb.append(", output=").append(output);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
