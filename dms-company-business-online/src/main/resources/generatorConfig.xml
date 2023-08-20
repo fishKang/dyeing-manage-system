@@ -36,7 +36,7 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="dms.infrastructure.repository"
                              targetProject="dms-company-business-online\src\main\java"/>
         <!--生成全部表tableName设为%-->
-        <table tableName="dms_operatelog">
+        <table tableName="dms_user">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
     </context>

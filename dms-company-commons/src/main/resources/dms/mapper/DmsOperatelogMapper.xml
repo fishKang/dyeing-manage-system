@@ -77,7 +77,7 @@
     id, serialno, service, method, status, input, output, indate, intime, outdate, outtime, 
     operator
   </sql>
-  <select id="selectByExample" parameterType="dms.dto.DmsExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="dms.operations.DmsOperatelogExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -101,7 +101,7 @@
     delete from dms_operatelog
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="dms.dto.DmsExample">
+  <delete id="deleteByExample" parameterType="dms.operations.DmsOperatelogExample">
     delete from dms_operatelog
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -196,7 +196,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="dms.dto.DmsExample" resultType="java.lang.Integer">
+  <select id="countByExample" parameterType="dms.operations.DmsOperatelogExample" resultType="java.lang.Integer">
     select count(*) from dms_operatelog
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

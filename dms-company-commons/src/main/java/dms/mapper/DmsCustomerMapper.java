@@ -1,10 +1,12 @@
 package dms.mapper;
 
 import dms.dto.DmsCustomer;
-import dms.dto.DmsExample;
+
 import java.util.List;
 import java.util.Map;
 
+import dms.operations.DmsCustomerExample;
+import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -12,9 +14,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface DmsCustomerMapper {
-    int countByExample(DmsExample example);
+    int countByExample(DmsCustomerExample example);
 
-    int deleteByExample(DmsExample example);
+    int deleteByExample(DmsCustomerExample example);
 
     int deleteByPrimaryKey(Integer id);
 
@@ -22,15 +24,16 @@ public interface DmsCustomerMapper {
 
     int insertSelective(DmsCustomer record);
 
-    List<DmsCustomer> selectByExample(DmsExample example);
+    List<DmsCustomer> selectByExample(DmsCustomerExample example);
 
-    List<Map> selectCustomerList(DmsExample example);
+    @MapKey("id")
+    List<Map> selectCustomerList(DmsCustomerExample example);
 
     DmsCustomer selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") DmsCustomer record, @Param("example") DmsExample example);
+    int updateByExampleSelective(@Param("record") DmsCustomer record, @Param("example") DmsCustomerExample example);
 
-    int updateByExample(@Param("record") DmsCustomer record, @Param("example") DmsExample example);
+    int updateByExample(@Param("record") DmsCustomer record, @Param("example") DmsCustomerExample example);
 
     int updateByPrimaryKeySelective(DmsCustomer record);
 

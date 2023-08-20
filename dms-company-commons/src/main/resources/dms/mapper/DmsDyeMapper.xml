@@ -72,7 +72,7 @@
   <sql id="Base_Column_List">
     id, name, status, createdate, createtime, expirydate, expirytime, operator
   </sql>
-  <select id="selectByExample" parameterType="dms.dto.DmsExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="dms.operations.DmsDyeExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -96,7 +96,7 @@
     delete from dms_dye
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="dms.dto.DmsExample">
+  <delete id="deleteByExample" parameterType="dms.operations.DmsDyeExample">
     delete from dms_dye
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -165,7 +165,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="dms.dto.DmsExample" resultType="java.lang.Integer">
+  <select id="countByExample" parameterType="dms.operations.DmsDyeExample" resultType="java.lang.Integer">
     select count(*) from dms_dye
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

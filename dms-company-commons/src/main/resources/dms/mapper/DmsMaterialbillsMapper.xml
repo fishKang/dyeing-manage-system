@@ -81,7 +81,7 @@
     id, type, customer, quantity, colorname, colorcode, clothescode, yarncode, status, 
     createdate, expirydate, plan, material, count, description, operator
   </sql>
-  <select id="selectByExample" parameterType="dms.dto.DmsExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="dms.operations.DmsMaterialbillsExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -105,7 +105,7 @@
     delete from dms_materialbills
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="dms.dto.DmsExample">
+  <delete id="deleteByExample" parameterType="dms.operations.DmsMaterialbillsExample">
     delete from dms_materialbills
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -228,7 +228,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="dms.dto.DmsExample" resultType="java.lang.Integer">
+  <select id="countByExample" parameterType="dms.operations.DmsMaterialbillsExample" resultType="java.lang.Integer">
     select count(*) from dms_materialbills
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

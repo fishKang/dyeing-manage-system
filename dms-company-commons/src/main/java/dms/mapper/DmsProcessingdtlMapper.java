@@ -1,10 +1,12 @@
 package dms.mapper;
 
 import dms.dto.DmsProcessingdtl;
-import dms.dto.DmsExample;
+
 import java.util.List;
 import java.util.Map;
 
+import dms.operations.DmsProcessingdtlExample;
+import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -12,24 +14,24 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface DmsProcessingdtlMapper {
-    int countByExample(DmsExample example);
+    int countByExample(DmsProcessingdtlExample example);
 
-    int deleteByExample(DmsExample example);
+    int deleteByExample(DmsProcessingdtlExample example);
 
     int deleteByPrimaryKey(Integer id);
 
     int insert(DmsProcessingdtl record);
     int insertSelective(DmsProcessingdtl record);
 
-    List<DmsProcessingdtl> selectByExample(DmsExample example);
-
+    List<DmsProcessingdtl> selectByExample(DmsProcessingdtlExample example);
+    @MapKey("id")
     List<Map> selectProcessingdtlList(Map<String,Object> map);
 
     DmsProcessingdtl selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") DmsProcessingdtl record, @Param("example") DmsExample example);
+    int updateByExampleSelective(@Param("record") DmsProcessingdtl record, @Param("example") DmsProcessingdtlExample example);
 
-    int updateByExample(@Param("record") DmsProcessingdtl record, @Param("example") DmsExample example);
+    int updateByExample(@Param("record") DmsProcessingdtl record, @Param("example") DmsProcessingdtlExample example);
 
     int updateByPrimaryKeySelective(DmsProcessingdtl record);
 

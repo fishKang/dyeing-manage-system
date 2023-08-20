@@ -1,9 +1,10 @@
 package dms.mapper;
 
 import dms.dto.DmsMaterialbillsdtl;
-import dms.dto.DmsExample;
+
 import java.util.List;
 
+import dms.operations.DmsMaterialbillsdtlExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -11,9 +12,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface DmsMaterialbillsdtlMapper {
-    int countByExample(DmsExample example);
+    int countByExample(DmsMaterialbillsdtlExample example);
 
-    int deleteByExample(DmsExample example);
+    int deleteByExample(DmsMaterialbillsdtlExample example);
 
     int deleteByPrimaryKey(Integer id);
 
@@ -21,13 +22,13 @@ public interface DmsMaterialbillsdtlMapper {
 
     int insertSelective(DmsMaterialbillsdtl record);
 
-    List<DmsMaterialbillsdtl> selectByExample(DmsExample example);
+    List<DmsMaterialbillsdtl> selectByExample(DmsMaterialbillsdtlExample example);
 
     DmsMaterialbillsdtl selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") DmsMaterialbillsdtl record, @Param("example") DmsExample example);
+    int updateByExampleSelective(@Param("record") DmsMaterialbillsdtl record, @Param("example") DmsMaterialbillsdtlExample example);
 
-    int updateByExample(@Param("record") DmsMaterialbillsdtl record, @Param("example") DmsExample example);
+    int updateByExample(@Param("record") DmsMaterialbillsdtl record, @Param("example") DmsMaterialbillsdtlExample example);
 
     int updateByPrimaryKeySelective(DmsMaterialbillsdtl record);
 

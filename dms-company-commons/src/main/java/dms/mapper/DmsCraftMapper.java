@@ -1,10 +1,12 @@
 package dms.mapper;
 
 import dms.dto.DmsCraft;
-import dms.dto.DmsExample;
+
 import java.util.List;
 import java.util.Map;
 
+import dms.operations.DmsCraftExample;
+import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -12,9 +14,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface DmsCraftMapper {
-    int countByExample(DmsExample example);
+    int countByExample(DmsCraftExample example);
 
-    int deleteByExample(DmsExample example);
+    int deleteByExample(DmsCraftExample example);
 
     int deleteByPrimaryKey(Integer id);
 
@@ -22,15 +24,15 @@ public interface DmsCraftMapper {
 
     int insertSelective(DmsCraft record);
 
-    List<DmsCraft> selectByExample(DmsExample example);
-
+    List<DmsCraft> selectByExample(DmsCraftExample example);
+    @MapKey("id")
     List<Map> selectDmsCraftList(Map<String,Object> map);
 
     DmsCraft selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") DmsCraft record, @Param("example") DmsExample example);
+    int updateByExampleSelective(@Param("record") DmsCraft record, @Param("example") DmsCraftExample example);
 
-    int updateByExample(@Param("record") DmsCraft record, @Param("example") DmsExample example);
+    int updateByExample(@Param("record") DmsCraft record, @Param("example") DmsCraftExample example);
 
     int updateByPrimaryKeySelective(DmsCraft record);
 

@@ -1,9 +1,10 @@
 package dms.mapper;
 
 import dms.dto.DmsDye;
-import dms.dto.DmsExample;
+
 import java.util.List;
 
+import dms.operations.DmsDyeExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -11,9 +12,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface DmsDyeMapper {
-    int countByExample(DmsExample example);
+    int countByExample(DmsDyeExample example);
 
-    int deleteByExample(DmsExample example);
+    int deleteByExample(DmsDyeExample example);
 
     int deleteByPrimaryKey(Integer id);
 
@@ -21,13 +22,13 @@ public interface DmsDyeMapper {
 
     int insertSelective(DmsDye record);
 
-    List<DmsDye> selectByExample(DmsExample example);
+    List<DmsDye> selectByExample(DmsDyeExample example);
 
     DmsDye selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") DmsDye record, @Param("example") DmsExample example);
+    int updateByExampleSelective(@Param("record") DmsDye record, @Param("example") DmsDyeExample example);
 
-    int updateByExample(@Param("record") DmsDye record, @Param("example") DmsExample example);
+    int updateByExample(@Param("record") DmsDye record, @Param("example") DmsDyeExample example);
 
     int updateByPrimaryKeySelective(DmsDye record);
 

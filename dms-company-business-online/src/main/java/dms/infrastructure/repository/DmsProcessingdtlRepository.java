@@ -2,9 +2,7 @@ package dms.infrastructure.repository;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.date.DateUtil;
-import dms.domain.valueobject.DmsCustomerVO;
 import dms.domain.valueobject.DmsProcessingdtlVO;
-import dms.dto.DmsExample;
 import dms.dto.DmsProcessingdtl;
 import dms.mapper.DmsProcessingdtlMapper;
 import org.apache.logging.log4j.Logger;

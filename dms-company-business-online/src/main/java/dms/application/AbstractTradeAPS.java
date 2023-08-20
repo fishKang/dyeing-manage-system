@@ -21,9 +21,9 @@ public abstract class AbstractTradeAPS implements ITrade{
             String logType = MapUtil.nvl(dmsCommon,"logtype");
             logger = LogManager.getLogger(logType);
             logger.info("开始交易，入参为："+ JSONUtil.toJsonStr(map));
-//            SqlExecutor.beginTransaction();
+            SqlExecutor.beginTransaction();
             resultMap = mainProcess(map,logger);
-//            SqlExecutor.endTransaction();
+            SqlExecutor.endTransaction();
             logger.info("交易结束，出参为："+ JSONUtil.toJsonStr(resultMap));
         }catch (Exception e){
             logger.info("交易异常："+ e.toString());
