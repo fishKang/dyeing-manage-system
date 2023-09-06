@@ -2,6 +2,7 @@ package dms.controller.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.json.JSONUtil;
+import common.SequenceConstants;
 import dms.common.LoggerConstants;
 import dms.controller.service.AbstractTradeService;
 import dms.controller.service.IDmsServiceARS;
@@ -9,6 +10,7 @@ import dms.domain.model.common.DmsChannelLogBO;
 import dms.domain.model.common.DmsCommonBO;
 import dms.domain.valueobject.DmsChannelLogVO;
 import dms.util.MapUtil;
+import dms.util.SeqUtil;
 import org.apache.logging.log4j.LogManager;
 import org.springframework.stereotype.Service;
 
@@ -26,10 +28,13 @@ public class IDmsServiceARSImpl extends AbstractTradeService implements IDmsServ
         DmsCommonBO dmsCommonBO = BeanUtil.mapToBean(dmscommon, DmsCommonBO.class,true);
         DmsChannelLogBO dmsChannelLogBO = BeanUtil.mapToBean(dmscommon, DmsChannelLogBO.class,true);
         dmsChannelLogBO.setApsservice(MapUtil.nvl(inputMap,"apsservice"));
+        dmsChannelLogBO.setOriginal(dmsChannelLogBO.getSerialno());
+        dmsChannelLogBO.setSerialno(dmsChannelLogBO.getSerialno());
+//        dmsChannelLogBO.setSerialno(SeqUtil.getSerialNo(SequenceConstants.BUSINESS));
         dmsChannelLogBO.setRegChanLog(true);
         dmsChannelLogBO.setIndate(dmsCommonBO.getWorkdate());
         dmsChannelLogBO.setIntime(dmsCommonBO.getWorktime());
-        dmsChannelLogBO.setLogger(LogManager.getLogger(LoggerConstants.BUSINESS));
+        dmsChannelLogBO.setLogger(LogManager.getLogger(LoggerConstants.CHANNEL));
         dmsChannelLogBO.setInput(JSONUtil.toJsonStr(inputMap));
 
         dmsChannelLogVO.setDmsChannelLogBO(dmsChannelLogBO);
@@ -54,27 +59,6 @@ public class IDmsServiceARSImpl extends AbstractTradeService implements IDmsServ
     @Override
     public Map<String, Object> queryCustomer(Map<String, Object> inputMap) {
         inputMap.put(APSSERVICE,"queryCustomerAPS");
-        inputMap.put(METHOD,MAINPROCESS);
-        return execute(inputMap);
-    }
-
-    @Override
-    public Map<String, Object> addProcessingDetails(Map<String, Object> inputMap) {
-        inputMap.put(APSSERVICE,"addProcessingDetailsAPS");
-        inputMap.put(METHOD,MAINPROCESS);
-        return execute(inputMap);
-    }
-
-    @Override
-    public Map<String, Object> queryProcessingDetails(Map<String, Object> inputMap) {
-        inputMap.put(APSSERVICE,"queryProcessingDetailsAPS");
-        inputMap.put(METHOD,MAINPROCESS);
-        return execute(inputMap);
-    }
-
-    @Override
-    public Map<String, Object> updateProcessingDetails(Map<String, Object> inputMap) {
-        inputMap.put(APSSERVICE,"updateProcessingDetailsAPS");
         inputMap.put(METHOD,MAINPROCESS);
         return execute(inputMap);
     }

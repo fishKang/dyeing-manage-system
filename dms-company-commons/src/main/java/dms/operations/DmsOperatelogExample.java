@@ -234,6 +234,76 @@ public class DmsOperatelogExample {
             return (Criteria) this;
         }
 
+        public Criteria andOriginalIsNull() {
+            addCriterion("original is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalIsNotNull() {
+            addCriterion("original is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalEqualTo(String value) {
+            addCriterion("original =", value, "original");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalNotEqualTo(String value) {
+            addCriterion("original <>", value, "original");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalGreaterThan(String value) {
+            addCriterion("original >", value, "original");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalGreaterThanOrEqualTo(String value) {
+            addCriterion("original >=", value, "original");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalLessThan(String value) {
+            addCriterion("original <", value, "original");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalLessThanOrEqualTo(String value) {
+            addCriterion("original <=", value, "original");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalLike(String value) {
+            addCriterion("original like", value, "original");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalNotLike(String value) {
+            addCriterion("original not like", value, "original");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalIn(List<String> values) {
+            addCriterion("original in", values, "original");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalNotIn(List<String> values) {
+            addCriterion("original not in", values, "original");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalBetween(String value1, String value2) {
+            addCriterion("original between", value1, value2, "original");
+            return (Criteria) this;
+        }
+
+        public Criteria andOriginalNotBetween(String value1, String value2) {
+            addCriterion("original not between", value1, value2, "original");
+            return (Criteria) this;
+        }
+
         public Criteria andServiceIsNull() {
             addCriterion("service is null");
             return (Criteria) this;

@@ -18,4 +18,4 @@ mybatis:
   configuration:
 #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
-
+    map-underscore-to-camel-case: true

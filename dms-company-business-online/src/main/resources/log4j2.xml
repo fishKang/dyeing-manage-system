@@ -57,7 +57,7 @@
         </Async>
 
         <!-- 这个会打印出所有的info及以上级别的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
-        <RollingFile name="file.userManage.appender" fileName="${FILE_PATH}/userRegister.log" filePattern="${FILE_PATH}/userRegister-INFO-%d{yyyy-MM-dd}_%i.log.gz" append="true">
+        <RollingFile name="file.channelLog.appender" fileName="${FILE_PATH}/channelLog.log" filePattern="${FILE_PATH}/userRegister-INFO-%d{yyyy-MM-dd}_%i.log.gz" append="true">
             <PatternLayout pattern="${LOG_PATTERN}" charset="${FILE_CHARSET}"/>
             <Policies>
                 <!-- 基于时间的触发策略。该策略主要是完成周期性的log文件封存工作。有两个参数：
@@ -83,8 +83,8 @@
                 </Delete>
             </DefaultRolloverStrategy>
         </RollingFile>
-        <Async name="async.userManage.appender">
-            <AppenderRef ref="file.userManage.appender" />
+        <Async name="async.channelLog.appender">
+            <AppenderRef ref="file.channelLog.appender" />
         </Async>
 
         <!-- 这个会打印出所有的info及以上级别的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
@@ -118,6 +118,37 @@
             <AppenderRef ref="file.business.appender" />
         </Async>
 
+        <!-- 这个会打印出所有的info及以上级别的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
+        <RollingFile name="file.processingDetails.appender" fileName="${FILE_PATH}/processingDetails.log" filePattern="${FILE_PATH}/processingDetails-INFO-%d{yyyy-MM-dd}_%i.log.gz" append="true">
+            <PatternLayout pattern="${LOG_PATTERN_DTL}" charset="${FILE_CHARSET}"/>
+            <Policies>
+                <!-- 基于时间的触发策略。该策略主要是完成周期性的log文件封存工作。有两个参数：
+               interval，integer型，指定两次封存动作之间的时间间隔。单位:以日志的命名精度来确定单位，
+                   比如yyyy-MM-dd-HH 单位为小时，yyyy-MM-dd-HH-mm 单位为分钟
+               modulate，boolean型，说明是否对封存时间进行调制。若modulate=true，
+                   则封存时间将以0点为边界进行偏移计算。比如，modulate=true，interval=4hours，
+                   那么假设上次封存日志的时间为00:00，则下次封存日志的时间为04:00，
+                   之后的封存时间依次为08:00，12:00，16:00-->
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy 属性如不设置，则默认为最多同一文件夹下当天 7 个文件后开始覆盖-->
+            <DefaultRolloverStrategy max="30">
+                <!-- 删除处理策略，在配置的路径中搜索，maxDepth 表示往下搜索的最大深度 -->
+                <Delete basePath="${FILE_PATH}/" maxDepth="1">
+                    <!-- 文件名搜索匹配，支持正则 -->
+                    <IfFileName glob="*.log.gz" />
+                    <!--!Note: 这里的 age 必须和 filePattern 协调, 后者是精确到 dd, 这里就要写成 xd, xD 就不起作用
+                    另外, 数字最好 >2, 否则可能造成删除的时候, 最近的文件还处于被占用状态,导致删除不成功!-->
+                    <!--7天-->
+                    <IfLastModified age="7d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+        <Async name="async.processingDetails.appender">
+            <AppenderRef ref="file.processingDetails.appender" />
+        </Async>
+
     </appenders>
 
     <!--Logger 节点用来单独指定日志的形式，比如要为指定包下的 class 指定不同的日志级别等。-->
@@ -130,12 +161,16 @@
             <AppenderRef ref="async.system.appender" />
         </Root>
 
-        <Logger name="userManageLogger" additivity="${LOGGER_ADDITIVITY}">
-            <AppenderRef ref="async.userManage.appender" level="info" />
+        <Logger name="channelLogger" additivity="${LOGGER_ADDITIVITY}">
+            <AppenderRef ref="async.channelLog.appender" level="info" />
         </Logger>
 
         <Logger name="businessLogger" additivity="${LOGGER_ADDITIVITY}">
             <AppenderRef ref="async.business.appender" level="info" />
+        </Logger>
+
+        <Logger name="processingDetailsLogger" additivity="${LOGGER_ADDITIVITY}">
+            <AppenderRef ref="async.processingDetails.appender" level="info" />
         </Logger>
 
     </loggers>

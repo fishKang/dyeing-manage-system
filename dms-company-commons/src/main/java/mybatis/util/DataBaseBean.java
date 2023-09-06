@@ -1,4 +1,4 @@
-package sql.util;
+package mybatis.util;
 
 import spring.util.TradeResponse;
 

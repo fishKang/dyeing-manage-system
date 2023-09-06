@@ -5,12 +5,14 @@ import cn.hutool.core.util.IdUtil;
 import cn.hutool.json.JSONUtil;
 import dms.assembler.DmsUserManageBOS;
 import dms.common.CodeEnum;
+import dms.common.LoggerConstants;
 import dms.convertor.ConvertorToMap;
 import dms.domain.model.common.DmsCommonBO;
 import dms.domain.model.DmsUserBO;
 import dms.domain.valueobject.DmsUserVO;
 import dms.infrastructure.exception.BusinessFailException;
 import dms.util.MapUtil;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,16 +39,10 @@ public class UserLoginAPS extends AbstractTradeAPS{
     }
 
     public DmsUserVO initInputParam(Map<String, Object> map, Logger logger){
-        Map<String, Object> dmscommon = MapUtil.nvl4Map(map,"dmscommon");
-        DmsCommonBO dmsCommonBO = BeanUtil.mapToBean(dmscommon, DmsCommonBO.class,true);
-        String serialno = IdUtil.fastUUID();
-        dmsCommonBO.setSerialno(serialno);
-
         Map<String, Object> privateMap = MapUtil.nvl4Map(map,"private");
         DmsUserBO dmsUserBO = BeanUtil.mapToBean(privateMap, DmsUserBO.class,true);
 
         DmsUserVO dmsUserVO = new DmsUserVO();
-        dmsUserVO.setDmsCommonBO(dmsCommonBO);
         dmsUserVO.setDmsUserBO(dmsUserBO);
         return dmsUserVO;
     }

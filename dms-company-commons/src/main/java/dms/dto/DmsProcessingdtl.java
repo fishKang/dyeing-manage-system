@@ -3,7 +3,7 @@ package dms.dto;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class DmsProcessingdtl implements Serializable {
+public class  DmsProcessingdtl implements Serializable {
     /**
      * 唯一标识
      *

@@ -38,18 +38,12 @@ public class AddProcessingDetailsAPS extends AbstractTradeAPS{
     }
 
     public DmsProcessingdtlVO initInputParam(Map<String, Object> map, Logger logger){
-        Map<String, Object> dmscommon = MapUtil.nvl4Map(map,"dmscommon");
-        DmsCommonBO dmsCommonBO = BeanUtil.mapToBean(dmscommon, DmsCommonBO.class,true);
-        String serialno = IdUtil.fastUUID();
-        dmsCommonBO.setSerialno(serialno);
-
         Map<String, Object> privateMap = MapUtil.nvl4Map(map,"private");
         DmsProcessingdtlBO dmsProcessingdtlBO = BeanUtil.mapToBean(privateMap, DmsProcessingdtlBO.class,true);
         if(null == dmsProcessingdtlBO.getAmount() || dmsProcessingdtlBO.getAmount().compareTo(new BigDecimal(0)) == 0){
             dmsProcessingdtlBO.setAmount(dmsProcessingdtlBO.getSettlementvolume().multiply(dmsProcessingdtlBO.getPrice()));
         }
         DmsProcessingdtlVO dmsProcessingdtlVO = new DmsProcessingdtlVO();
-        dmsProcessingdtlVO.setDmsCommonBO(dmsCommonBO);
         dmsProcessingdtlVO.setDmsProcessingdtlBO(dmsProcessingdtlBO);
         return dmsProcessingdtlVO;
     }

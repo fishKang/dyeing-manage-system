@@ -11,11 +11,18 @@ public class DmsOperatelog implements Serializable {
     private Integer id;
 
     /**
-     * 请求序号
+     * 染色操作序号
      *
      * @mbggenerated
      */
     private String serialno;
+
+    /**
+     * 请求序号
+     *
+     * @mbggenerated
+     */
+    private String original;
 
     /**
      * 请求服务
@@ -103,6 +110,14 @@ public class DmsOperatelog implements Serializable {
 
     public void setSerialno(String serialno) {
         this.serialno = serialno;
+    }
+
+    public String getOriginal() {
+        return original;
+    }
+
+    public void setOriginal(String original) {
+        this.original = original;
     }
 
     public String getService() {
@@ -193,6 +208,7 @@ public class DmsOperatelog implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", serialno=").append(serialno);
+        sb.append(", original=").append(original);
         sb.append(", service=").append(service);
         sb.append(", method=").append(method);
         sb.append(", status=").append(status);

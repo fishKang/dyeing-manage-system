@@ -8,7 +8,6 @@ import dms.mapper.DmsUserMapper;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import sql.util.SqlExecutor;
 
 import java.util.Date;
 import java.util.Map;

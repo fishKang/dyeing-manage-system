@@ -44,7 +44,6 @@ public abstract class AbstractTradeService implements IService{
         String className = this.getClass().getSimpleName();
         DmsChannelLogVO dmsChannelLogVO = initSrv(inputMap);
         DmsChannelLogBO dmsChannelLogBO = dmsChannelLogVO.getDmsChannelLogBO();
-        DmsCommonBO dmsCommonBO = dmsChannelLogVO.getDmsCommonBO();
         Logger log = dmsChannelLogBO.getLogger();
         log.info(className + ":接收到外围请求" + inputMap);
         log.info(className + "-start.交易处理开始");
@@ -54,7 +53,7 @@ public abstract class AbstractTradeService implements IService{
             stepNo++;
             log.info(className + "step" + stepNo + "：输入公共通讯区转换");
             //设置线程名
-            Thread.currentThread().setName(dmsCommonBO.getSerialno());
+            Thread.currentThread().setName(dmsChannelLogBO.getSerialno());
 
             stepNo++;
             log.info(className + "step" + stepNo + "：输入通讯区校验");

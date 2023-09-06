@@ -33,4 +33,12 @@ public class DmsProcessingdtlManageBOS {
             throw new BusinessFailException(CodeEnum.ERR_0007.getCode(),CodeEnum.ERR_0007.getMsg());
         }
     }
+
+    public void deleteProcessingdtl(DmsProcessingdtlVO dmsProcessingdtlVO, Logger log) throws BusinessFailException {
+        int i = dmsProcessingdtlRepository.deleteProcessingdtl(dmsProcessingdtlVO,log);
+        if(0 == i){
+            log.info("DmsProcessingdtlManageBOS-加工明细更新失败"+ dmsProcessingdtlVO.toString());
+            throw new BusinessFailException(CodeEnum.ERR_0007.getCode(),CodeEnum.ERR_0007.getMsg());
+        }
+    }
 }

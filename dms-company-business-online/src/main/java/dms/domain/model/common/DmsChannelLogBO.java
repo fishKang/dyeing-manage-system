@@ -5,6 +5,8 @@ import org.apache.logging.log4j.Logger;
 
 @Data
 public class DmsChannelLogBO {
+    private String serialno;
+    private String original;
     private Integer status;
     private String input;
     private String output;

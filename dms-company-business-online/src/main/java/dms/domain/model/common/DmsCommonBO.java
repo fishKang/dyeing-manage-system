@@ -6,7 +6,6 @@ import java.io.Serializable;
 
 @Data
 public class DmsCommonBO implements Serializable {
-    private String serialno;
     private int zoneno;
     private String service;
     private String method;

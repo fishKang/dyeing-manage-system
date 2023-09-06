@@ -37,16 +37,10 @@ public class QueryCustomerAPS extends AbstractTradeAPS{
     }
 
     public DmsCustomerVO initInputParam(Map<String, Object> map, Logger logger){
-        Map<String, Object> dmscommon = MapUtil.nvl4Map(map,"dmscommon");
-        DmsCommonBO dmsCommonBO = BeanUtil.mapToBean(dmscommon, DmsCommonBO.class,true);
-        String serialno = IdUtil.fastUUID();
-        dmsCommonBO.setSerialno(serialno);
-
         Map<String, Object> privateMap = MapUtil.nvl4Map(map,"private");
         DmsCustomerBO dmsCustomerBO = BeanUtil.mapToBean(privateMap, DmsCustomerBO.class,true);
 
         DmsCustomerVO dmsCustomerVO = new DmsCustomerVO();
-        dmsCustomerVO.setDmsCommonBO(dmsCommonBO);
         dmsCustomerVO.setDmsCustomerBO(dmsCustomerBO);
         return dmsCustomerVO;
     }

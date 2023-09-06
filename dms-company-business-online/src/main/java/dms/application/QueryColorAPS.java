@@ -35,16 +35,10 @@ public class QueryColorAPS extends AbstractTradeAPS{
     }
 
     public DmsColorVO initInputParam(Map<String, Object> map, Logger logger){
-        Map<String, Object> dmscommon = MapUtil.nvl4Map(map,"dmscommon");
-        DmsCommonBO dmsCommonBO = BeanUtil.mapToBean(dmscommon, DmsCommonBO.class,true);
-        String serialno = IdUtil.fastUUID();
-        dmsCommonBO.setSerialno(serialno);
-
         Map<String, Object> privateMap = MapUtil.nvl4Map(map,"private");
         DmsColorBO dmsColorBO = BeanUtil.mapToBean(privateMap, DmsColorBO.class,true);
 
         DmsColorVO dmsColorVO = new DmsColorVO();
-        dmsColorVO.setDmsCommonBO(dmsCommonBO);
         dmsColorVO.setDmsColorBO(dmsColorBO);
         return dmsColorVO;
     }

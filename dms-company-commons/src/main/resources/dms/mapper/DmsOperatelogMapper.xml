@@ -4,16 +4,19 @@
   <resultMap id="BaseResultMap" type="dms.dto.DmsOperatelog">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="serialno" jdbcType="VARCHAR" property="serialno" />
+    <result column="original" jdbcType="VARCHAR" property="original" />
     <result column="service" jdbcType="VARCHAR" property="service" />
     <result column="method" jdbcType="VARCHAR" property="method" />
     <result column="status" jdbcType="INTEGER" property="status" />
-    <result column="input" jdbcType="VARCHAR" property="input" />
-    <result column="output" jdbcType="VARCHAR" property="output" />
     <result column="indate" jdbcType="VARCHAR" property="indate" />
     <result column="intime" jdbcType="VARCHAR" property="intime" />
     <result column="outdate" jdbcType="VARCHAR" property="outdate" />
     <result column="outtime" jdbcType="VARCHAR" property="outtime" />
     <result column="operator" jdbcType="VARCHAR" property="operator" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="dms.dto.DmsOperatelog">
+    <result column="input" jdbcType="LONGVARCHAR" property="input" />
+    <result column="output" jdbcType="LONGVARCHAR" property="output" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -74,9 +77,28 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, serialno, service, method, status, input, output, indate, intime, outdate, outtime, 
+    id, serialno, original, service, method, status, indate, intime, outdate, outtime, 
     operator
   </sql>
+  <sql id="Blob_Column_List">
+    input, output
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="dms.operations.DmsOperatelogExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from dms_operatelog
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
   <select id="selectByExample" parameterType="dms.operations.DmsOperatelogExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -91,9 +113,11 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select
     <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
     from dms_operatelog
     where id = #{id,jdbcType=INTEGER}
   </select>
@@ -111,14 +135,16 @@
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into dms_operatelog (serialno, service, method, 
-      status, input, output, 
-      indate, intime, outdate, 
-      outtime, operator)
-    values (#{serialno,jdbcType=VARCHAR}, #{service,jdbcType=VARCHAR}, #{method,jdbcType=VARCHAR}, 
-      #{status,jdbcType=INTEGER}, #{input,jdbcType=VARCHAR}, #{output,jdbcType=VARCHAR}, 
-      #{indate,jdbcType=VARCHAR}, #{intime,jdbcType=VARCHAR}, #{outdate,jdbcType=VARCHAR}, 
-      #{outtime,jdbcType=VARCHAR}, #{operator,jdbcType=VARCHAR})
+    insert into dms_operatelog (serialno, original, service,
+      method, status, indate,
+      intime, outdate, outtime,
+      operator, input, output
+      )
+    values (#{serialno,jdbcType=VARCHAR}, #{original,jdbcType=VARCHAR}, #{service,jdbcType=VARCHAR},
+      #{method,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{indate,jdbcType=VARCHAR},
+      #{intime,jdbcType=VARCHAR}, #{outdate,jdbcType=VARCHAR}, #{outtime,jdbcType=VARCHAR},
+      #{operator,jdbcType=VARCHAR}, #{input,jdbcType=LONGVARCHAR}, #{output,jdbcType=LONGVARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="dms.dto.DmsOperatelog">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
@@ -129,6 +155,9 @@
       <if test="serialno != null">
         serialno,
       </if>
+      <if test="original != null">
+        original,
+      </if>
       <if test="service != null">
         service,
       </if>
@@ -137,12 +166,6 @@
       </if>
       <if test="status != null">
         status,
-      </if>
-      <if test="input != null">
-        input,
-      </if>
-      <if test="output != null">
-        output,
       </if>
       <if test="indate != null">
         indate,
@@ -159,10 +182,19 @@
       <if test="operator != null">
         operator,
       </if>
+      <if test="input != null">
+        input,
+      </if>
+      <if test="output != null">
+        output,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="serialno != null">
         #{serialno,jdbcType=VARCHAR},
+      </if>
+      <if test="original != null">
+        #{original,jdbcType=VARCHAR},
       </if>
       <if test="service != null">
         #{service,jdbcType=VARCHAR},
@@ -172,12 +204,6 @@
       </if>
       <if test="status != null">
         #{status,jdbcType=INTEGER},
-      </if>
-      <if test="input != null">
-        #{input,jdbcType=VARCHAR},
-      </if>
-      <if test="output != null">
-        #{output,jdbcType=VARCHAR},
       </if>
       <if test="indate != null">
         #{indate,jdbcType=VARCHAR},
@@ -193,6 +219,12 @@
       </if>
       <if test="operator != null">
         #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="input != null">
+        #{input,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="output != null">
+        #{output,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -211,6 +243,9 @@
       <if test="record.serialno != null">
         serialno = #{record.serialno,jdbcType=VARCHAR},
       </if>
+      <if test="record.original != null">
+        original = #{record.original,jdbcType=VARCHAR},
+      </if>
       <if test="record.service != null">
         service = #{record.service,jdbcType=VARCHAR},
       </if>
@@ -219,12 +254,6 @@
       </if>
       <if test="record.status != null">
         status = #{record.status,jdbcType=INTEGER},
-      </if>
-      <if test="record.input != null">
-        input = #{record.input,jdbcType=VARCHAR},
-      </if>
-      <if test="record.output != null">
-        output = #{record.output,jdbcType=VARCHAR},
       </if>
       <if test="record.indate != null">
         indate = #{record.indate,jdbcType=VARCHAR},
@@ -241,7 +270,32 @@
       <if test="record.operator != null">
         operator = #{record.operator,jdbcType=VARCHAR},
       </if>
+      <if test="record.input != null">
+        input = #{record.input,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.output != null">
+        output = #{record.output,jdbcType=LONGVARCHAR},
+      </if>
     </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update dms_operatelog
+    set id = #{record.id,jdbcType=INTEGER},
+      serialno = #{record.serialno,jdbcType=VARCHAR},
+      original = #{record.original,jdbcType=VARCHAR},
+      service = #{record.service,jdbcType=VARCHAR},
+      method = #{record.method,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER},
+      indate = #{record.indate,jdbcType=VARCHAR},
+      intime = #{record.intime,jdbcType=VARCHAR},
+      outdate = #{record.outdate,jdbcType=VARCHAR},
+      outtime = #{record.outtime,jdbcType=VARCHAR},
+      operator = #{record.operator,jdbcType=VARCHAR},
+      input = #{record.input,jdbcType=LONGVARCHAR},
+      output = #{record.output,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -250,11 +304,10 @@
     update dms_operatelog
     set id = #{record.id,jdbcType=INTEGER},
       serialno = #{record.serialno,jdbcType=VARCHAR},
+      original = #{record.original,jdbcType=VARCHAR},
       service = #{record.service,jdbcType=VARCHAR},
       method = #{record.method,jdbcType=VARCHAR},
       status = #{record.status,jdbcType=INTEGER},
-      input = #{record.input,jdbcType=VARCHAR},
-      output = #{record.output,jdbcType=VARCHAR},
       indate = #{record.indate,jdbcType=VARCHAR},
       intime = #{record.intime,jdbcType=VARCHAR},
       outdate = #{record.outdate,jdbcType=VARCHAR},
@@ -270,6 +323,9 @@
       <if test="serialno != null">
         serialno = #{serialno,jdbcType=VARCHAR},
       </if>
+      <if test="original != null">
+        original = #{original,jdbcType=VARCHAR},
+      </if>
       <if test="service != null">
         service = #{service,jdbcType=VARCHAR},
       </if>
@@ -278,12 +334,6 @@
       </if>
       <if test="status != null">
         status = #{status,jdbcType=INTEGER},
-      </if>
-      <if test="input != null">
-        input = #{input,jdbcType=VARCHAR},
-      </if>
-      <if test="output != null">
-        output = #{output,jdbcType=VARCHAR},
       </if>
       <if test="indate != null">
         indate = #{indate,jdbcType=VARCHAR},
@@ -300,17 +350,38 @@
       <if test="operator != null">
         operator = #{operator,jdbcType=VARCHAR},
       </if>
+      <if test="input != null">
+        input = #{input,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="output != null">
+        output = #{output,jdbcType=LONGVARCHAR},
+      </if>
     </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="dms.dto.DmsOperatelog">
+    update dms_operatelog
+    set serialno = #{serialno,jdbcType=VARCHAR},
+      original = #{original,jdbcType=VARCHAR},
+      service = #{service,jdbcType=VARCHAR},
+      method = #{method,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      indate = #{indate,jdbcType=VARCHAR},
+      intime = #{intime,jdbcType=VARCHAR},
+      outdate = #{outdate,jdbcType=VARCHAR},
+      outtime = #{outtime,jdbcType=VARCHAR},
+      operator = #{operator,jdbcType=VARCHAR},
+      input = #{input,jdbcType=LONGVARCHAR},
+      output = #{output,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="dms.dto.DmsOperatelog">
     update dms_operatelog
     set serialno = #{serialno,jdbcType=VARCHAR},
+      original = #{original,jdbcType=VARCHAR},
       service = #{service,jdbcType=VARCHAR},
       method = #{method,jdbcType=VARCHAR},
       status = #{status,jdbcType=INTEGER},
-      input = #{input,jdbcType=VARCHAR},
-      output = #{output,jdbcType=VARCHAR},
       indate = #{indate,jdbcType=VARCHAR},
       intime = #{intime,jdbcType=VARCHAR},
       outdate = #{outdate,jdbcType=VARCHAR},
@@ -321,16 +392,41 @@
 
   <update id="updateBySerialno" parameterType="dms.dto.DmsOperatelog">
     update dms_operatelog
-    set service = #{service,jdbcType=VARCHAR},
-      method = #{method,jdbcType=VARCHAR},
-      status = #{status,jdbcType=INTEGER},
-      input = #{input,jdbcType=VARCHAR},
-      output = #{output,jdbcType=VARCHAR},
-      indate = #{indate,jdbcType=VARCHAR},
-      intime = #{intime,jdbcType=VARCHAR},
-      outdate = #{outdate,jdbcType=VARCHAR},
-      outtime = #{outtime,jdbcType=VARCHAR},
-      operator = #{operator,jdbcType=VARCHAR}
+    <set>
+      <if test="original != null">
+        original = #{original,jdbcType=VARCHAR},
+      </if>
+      <if test="service != null">
+        service = #{service,jdbcType=VARCHAR},
+      </if>
+      <if test="method != null">
+        method = #{method,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="indate != null">
+        indate = #{indate,jdbcType=VARCHAR},
+      </if>
+      <if test="intime != null">
+        intime = #{intime,jdbcType=VARCHAR},
+      </if>
+      <if test="outdate != null">
+        outdate = #{outdate,jdbcType=VARCHAR},
+      </if>
+      <if test="outtime != null">
+        outtime = #{outtime,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null">
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="input != null">
+        input = #{input,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="output != null">
+        output = #{output,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
     where serialno = #{serialno,jdbcType=VARCHAR}
   </update>
 </mapper>

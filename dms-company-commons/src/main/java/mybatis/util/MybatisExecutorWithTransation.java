@@ -1,4 +1,4 @@
-package sql.util;
+package mybatis.util;
 
 import exception.DatabaseException;
 import org.apache.ibatis.session.RowBounds;

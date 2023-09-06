@@ -10,8 +10,9 @@ package dms.common;
  */
 public class LoggerConstants {
 	
-	public final static String USER = "userManageLogger";
+	public final static String CHANNEL = "channelLogger";
 	public final static String BUSINESS = "businessLogger";
+	public final static String PROCESSINGDETAILS = "processingDetailsLogger";
 	public final static String RETMSG = "RETMSG";
 	public final static String RETINFO = "RETINFO";
 

@@ -1,4 +1,4 @@
-package sql.util;
+package mybatis.executor;
 
 import org.apache.logging.log4j.Logger;
 

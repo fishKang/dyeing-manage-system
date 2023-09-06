@@ -4,9 +4,16 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 public class DmsProcessingdtlBO implements Serializable {
+    /**
+     * 唯一标识
+     *
+     * @mbggenerated
+     */
+    private List<Integer> deletelistid;
     /**
      * 唯一标识
      *

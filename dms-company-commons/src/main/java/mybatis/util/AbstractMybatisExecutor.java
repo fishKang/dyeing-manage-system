@@ -1,6 +1,7 @@
-package sql.util;
+package mybatis.util;
 
 import exception.DatabaseException;
+import mybatis.executor.IMybatisExecutor;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.slf4j.Logger;
@@ -12,7 +13,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class AbstractMybatisExecutor implements IMybatisExecutor{
+public abstract class AbstractMybatisExecutor implements IMybatisExecutor {
     private SqlSessionFactory sqlSessionFactory;
     Logger logger = LoggerFactory.getLogger(this.getClass());
     String factoryType = "";

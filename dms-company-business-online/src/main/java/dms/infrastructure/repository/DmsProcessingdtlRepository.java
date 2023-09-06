@@ -5,6 +5,8 @@ import cn.hutool.core.date.DateUtil;
 import dms.domain.valueobject.DmsProcessingdtlVO;
 import dms.dto.DmsProcessingdtl;
 import dms.mapper.DmsProcessingdtlMapper;
+import dms.operations.DmsProcessingdtlExample;
+import mybatis.executor.SqlExecutor;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -35,6 +37,8 @@ public class DmsProcessingdtlRepository {
 
         Map<String,Object> input = BeanUtil.beanToMap(dmsProcessingdtlVO.getDmsProcessingdtlBO());
         List list =  dmsProcessingdtlMapper.selectProcessingdtlList(input);
+//        List list2 =  SqlExecutor.selectList(log,"dms.mapper.DmsProcessingdtlMapper.selectProcessingdtlList",input);
+
         dmsProcessingdtlVO.setDmsProcessingdtlBOList(list);
     }
 
@@ -43,5 +47,11 @@ public class DmsProcessingdtlRepository {
         BeanUtil.copyProperties(dmsProcessingdtlVO.getDmsProcessingdtlBO(),dmsProcessingdtl);
 
         return dmsProcessingdtlMapper.updateDmsProcessingdtl(dmsProcessingdtl);
+    }
+
+    public int deleteProcessingdtl(DmsProcessingdtlVO dmsProcessingdtlVO , Logger log) {
+        DmsProcessingdtlExample dmsProcessingdtlExample = new DmsProcessingdtlExample();
+        dmsProcessingdtlExample.createCriteria().andIdIn(dmsProcessingdtlVO.getDmsProcessingdtlBO().getDeletelistid());
+        return dmsProcessingdtlMapper.deleteByExample(dmsProcessingdtlExample);
     }
 }

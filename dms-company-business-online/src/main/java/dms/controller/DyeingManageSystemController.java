@@ -1,10 +1,10 @@
 package dms.controller;
 
 import dms.application.UserRegisterAPS;
+import dms.controller.service.IDmsProcessingDetailsARS;
 import dms.controller.service.IDmsServiceARS;
+import dms.domain.dto.DmsProcessingdtlDTO;
 import dms.domain.model.trade.TradeResponse;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +23,8 @@ public class DyeingManageSystemController {
     UserRegisterAPS userRegisterAPS;
     @Autowired
     IDmsServiceARS iDmsServiceARS;
+    @Autowired
+    IDmsProcessingDetailsARS iDmsProcessingDetailsARS;
 
     @RequestMapping(value = "/userRegister", method = RequestMethod.POST)
     @ResponseBody
@@ -55,21 +57,30 @@ public class DyeingManageSystemController {
     @RequestMapping(value = "/addProcessingDetails", method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> addProcessingDetails(@RequestBody Map<String,Object> map){
-        Map<String,Object> resultMap= iDmsServiceARS.addProcessingDetails(map);
+        Map<String,Object> resultMap= iDmsProcessingDetailsARS.addProcessingDetails(map);
         return resultMap;
     }
 
     @RequestMapping(value = "/queryProcessingDetails", method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> queryProcessingDetails(@RequestBody Map<String,Object> map){
-        Map<String,Object> resultMap= iDmsServiceARS.queryProcessingDetails(map);
+        Map<String,Object> resultMap= iDmsProcessingDetailsARS.queryProcessingDetails(map);
         return resultMap;
     }
+
+
 
     @RequestMapping(value = "/updateProcessingDetails", method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> updateProcessingDetails(@RequestBody Map<String,Object> map){
-        Map<String,Object> resultMap= iDmsServiceARS.updateProcessingDetails(map);
+        Map<String,Object> resultMap= iDmsProcessingDetailsARS.updateProcessingDetails(map);
+        return resultMap;
+    }
+
+    @RequestMapping(value = "/deleteProcessingDetails", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> deleteProcessingDetails(@RequestBody Map<String,Object> map){
+        Map<String,Object> resultMap= iDmsProcessingDetailsARS.deleteProcessingDetails(map);
         return resultMap;
     }
 
